@@ -1,0 +1,3500 @@
+[{
+  "_id": {
+    "$oid": "6759660fbd3e1a97303107e1"
+  },
+  "job_id": {
+    "$oid": "67615ee00a19a0d2909f33f1"
+  },
+  "job_title": "Finance Officer",
+  "job_type": "OnRole",
+  "project_id": {
+    "$oid": "6756c77d03614a9006479bfb"
+  },
+  "project_name": "GFATM HIV/AIDS & TB",
+  "department": "",
+  "name": "Gaurav",
+  "email": "gauravpachouri32110@gmail.com",
+  "mobile_no": "8287449975",
+  "designation": "Finance Officer",
+  "total_experience": "7 Year(s)",
+  "relevant_experience": "7 Year(s)",
+  "location": "Ghaziabad",
+  "current_ctc": "Rs 4.80 Lakhs",
+  "expected_ctc": "Negotiable",
+  "notice_period": "NaN",
+  "resume_file": "1733912078820_91325107_98269713.pdf",
+  "current_employer": "Northern Steel Genral",
+  "last_working_day": {
+    "$date": "2024-12-18T07:24:53.318Z"
+  },
+  "applied_from": "Naukri",
+  "social_links": [],
+  "form_status": "Deleted",
+  "profile_status": "Active",
+  "kyc_steps": "Profile",
+  "add_date": {
+    "$date": "2024-12-18T07:24:53.318Z"
+  },
+  "updated_on": {
+    "$date": "2024-12-18T10:13:03.517Z"
+  },
+  "applied_jobs": [
+    {
+      "job_id": {
+        "$oid": "67595b42bd3e1a973031050a"
+      },
+      "job_title": "Manager Operations",
+      "job_type": "OnContract",
+      "job_location": "Noida",
+      "job_designation": "Manager Operations",
+      "job_designation_id": {
+        "$oid": "6730436c93c167ffc0c61309"
+      },
+      "offer_ctc": 0,
+      "original_ctc": 0,
+      "project_id": {
+        "$oid": "67446d41bfdc04d7e3432f80"
+      },
+      "project_name": "MMU-Assam",
+      "department": "CSR",
+      "recommendation": "",
+      "interview_status": "Pending",
+      "form_status": "Interview",
+      "add_date": {
+        "$date": "2024-12-11T10:14:39.092Z"
+      },
+      "interview_type": "Online",
+      "google_meet_link": "www.google.com",
+      "venue_location": "noida",
+      "interview_host": "Panel",
+      "profile_details": {
+        "resume_file": "1733912078820_91325107_98269713.pdf",
+        "designation": "HR",
+        "total_experience": "4 Year(s) 0 Months",
+        "relevant_experience": "2 Year(s) 0 Months",
+        "location": "Noida",
+        "current_ctc": "4",
+        "expected_ctc": "5",
+        "notice_period": "20",
+        "current_employer": "HLFPPT",
+        "last_working_day": "1999-06-15T00:00:00.000Z",
+        "applied_from": "Naukri"
+      },
+      "mark_as_hired": "No",
+      "offer_status": "",
+      "both_address_same": "No",
+      "_id": {
+        "$oid": "6759660fbd3e1a97303107e2"
+      },
+      "interviewer": [
+        {
+          "employee_name": "Ajay Kumar Sharma (6587)",
+          "designation": "Senior Manager - HR",
+          "employee_id": {
+            "$oid": "673edeabd2e1daae56bd88c8"
+          },
+          "rating": 2.5,
+          "status": "Accept",
+          "feedback_status": "Approved",
+          "add_date": {
+            "$date": "2024-12-11T10:22:11.571Z"
+          },
+          "stage": "1st Round",
+          "communication": 6.5,
+          "skills": 7.5,
+          "total": 0,
+          "interview_date": {
+            "$date": "2024-12-13T07:00:00.000Z"
+          },
+          "_id": {
+            "$oid": "675968f4b42c38f735148736"
+          },
+          "updated_on": {
+            "$date": "2024-12-18T10:13:03.517Z"
+          },
+          "feedback_date": {
+            "$date": "2024-12-13T00:00:00.000Z"
+          },
+          "added_by": "Deepak  Singh",
+          "comment": "Candidate is having good skills for work"
+        }
+      ],
+      "interview_date": {
+        "$date": "2024-12-13T07:00:00.000Z"
+      },
+      "onboard_date": {
+        "$date": "2024-12-11T10:14:39.098Z"
+      },
+      "batch_id": "",
+      "interview_duration": "15 min",
+      "stage": "1st Round"
+    },
+    {
+      "job_id": {
+        "$oid": "67615ee00a19a0d2909f33f1"
+      },
+      "job_title": "Finance Officer",
+      "job_type": "OnRole",
+      "job_location": "Noida , Uttar Pradesh",
+      "job_designation": "Finance Officer",
+      "job_designation_id": {
+        "$oid": "673041a393c167ffc0c61290"
+      },
+      "offer_ctc": 0,
+      "original_ctc": 960000,
+      "project_id": {
+        "$oid": "6756c77d03614a9006479bfb"
+      },
+      "project_name": "GFATM HIV/AIDS & TB",
+      "department": "Finance",
+      "recommendation": "",
+      "interview_status": "Pending",
+      "form_status": "Deleted",
+      "add_date": {
+        "$date": "2024-12-18T07:24:53.317Z"
+      },
+      "interview_type": "Online",
+      "google_meet_link": "https://meet.google.com/ftk-vxsx-fuw",
+      "venue_location": "",
+      "interview_host": "One-To-One",
+      "mark_as_hired": "No",
+      "offer_status": "",
+      "both_address_same": "No",
+      "final_job_offer_approval_status": "No",
+      "_id": {
+        "$oid": "676278c5b6bb0a47bb1127da"
+      },
+      "interviewer": [
+        {
+          "employee_name": "Ajay Kumar Sharma (6587)",
+          "designation": "Senior Manager - HR",
+          "employee_id": {
+            "$oid": "673edeabd2e1daae56bd88c8"
+          },
+          "rating": 0,
+          "status": "Pending",
+          "feedback_status": "Pending",
+          "add_date": {
+            "$date": "2024-12-18T07:26:10.235Z"
+          },
+          "stage": "1st Round",
+          "communication": 0,
+          "skills": 0,
+          "total": 0,
+          "interview_date": {
+            "$date": "2024-12-18T07:30:00.000Z"
+          },
+          "_id": {
+            "$oid": "67627912b6bb0a47bb112811"
+          },
+          "updated_on": {
+            "$date": "2024-12-18T07:26:10.240Z"
+          },
+          "feedback_date": {
+            "$date": "2024-12-18T07:26:10.240Z"
+          }
+        }
+      ],
+      "interview_date": {
+        "$date": "2024-12-18T07:30:00.000Z"
+      },
+      "onboard_date": {
+        "$date": "2024-12-18T07:24:53.347Z"
+      },
+      "final_job_offer_approval": [
+        {
+          "employee_id": "673edeabd2e1daae56bd88c4",
+          "employee_code": "5258",
+          "designation": "Project Director",
+          "name": "Sangita Pandey",
+          "email": "psangita@hlfppt.org",
+          "status": "",
+          "priority": 1,
+          "add_date": {
+            "$date": "2024-12-18T10:10:18.242Z"
+          },
+          "_id": {
+            "$oid": "67629f8a978128df4db50f09"
+          }
+        },
+        {
+          "employee_id": "673edeabd2e1daae56bd88c8",
+          "employee_code": "6587",
+          "designation": "Senior Manager - HR",
+          "name": "Ajay Kumar Sharma",
+          "email": "ajaysharma@hlfppt.org",
+          "status": "",
+          "priority": 2,
+          "add_date": {
+            "$date": "2024-12-18T10:10:18.242Z"
+          },
+          "_id": {
+            "$oid": "67629f8a978128df4db50f0a"
+          }
+        },
+        {
+          "employee_id": "673edeabd2e1daae56bd88d6",
+          "employee_code": "7660",
+          "designation": "Project Lead- TB",
+          "name": "Chaturanand  Thakur",
+          "email": "cthakur@hlfppt.org",
+          "status": "",
+          "priority": 3,
+          "add_date": {
+            "$date": "2024-12-18T10:10:18.242Z"
+          },
+          "_id": {
+            "$oid": "67629f8a978128df4db50f0b"
+          }
+        },
+        {
+          "employee_id": "NA",
+          "employee_code": "CEO",
+          "designation": "CEO",
+          "name": "CEO Sir",
+          "email": "CEO",
+          "status": "",
+          "priority": 4,
+          "add_date": {
+            "$date": "2024-12-18T10:10:18.242Z"
+          },
+          "_id": {
+            "$oid": "67629f8a978128df4db50f0c"
+          }
+        }
+      ],
+      "batch_id": "",
+      "interview_duration": "15 min",
+      "stage": "1st Round"
+    }
+  ],
+  "assessment_apply_status": "disable",
+  "assessment_status": "Pending",
+  "assessment_result": "",
+  "score": 0,
+  "complete_profile_status": 40,
+  "profile_avg_rating": 0,
+  "page_steps": [
+    {
+      "step": 1,
+      "page": "MCQ",
+      "status": "pending",
+      "_id": {
+        "$oid": "676278c5b6bb0a47bb1127db"
+      }
+    },
+    {
+      "step": 1,
+      "page": "MCQ",
+      "status": "pending",
+      "_id": {
+        "$oid": "676278dcb6bb0a47bb1127e8"
+      }
+    }
+  ],
+  "reject_doc_reason": "",
+  "mcq_final_score": 0,
+  "mcq_score_final_result": "",
+  "mcq_attempts": "Available",
+  "comprehensive_final_score": 0,
+  "comprehensive_score_final_result": "",
+  "comprehensive_attempts": "Available",
+  "otp_sent_on": {
+    "$date": "2024-12-11T10:14:39.098Z"
+  },
+  "experience": [],
+  "education": [],
+  "docs": [],
+  "assessment_result_data": [],
+  "__v": 0,
+  "batch_id": "",
+  "current_employer_mobile": "",
+  "reference_employee": ""
+},
+{
+  "_id": {
+    "$oid": "675a9a567ddeb1651ada39c6"
+  },
+  "job_id": {
+    "$oid": "67595b42bd3e1a973031050a"
+  },
+  "job_title": "Manager Operations",
+  "job_type": "OnContract",
+  "project_id": {
+    "$oid": "67446d41bfdc04d7e3432f80"
+  },
+  "project_name": "MMU-Assam",
+  "department": "CSR",
+  "name": "Anil Kumar",
+  "email": "anil@duplextech.com",
+  "mobile_no": "8423873295",
+  "designation": "devops",
+  "total_experience": "12 Year(s) 0 Months",
+  "relevant_experience": "12 Year(s) 0 Months",
+  "location": "Noida",
+  "current_ctc": "56",
+  "expected_ctc": "67",
+  "notice_period": "0",
+  "resume_file": "1733990998929_98998426_36123625.pdf",
+  "current_employer": "dts",
+  "social_links": [],
+  "form_status": "Rejected",
+  "profile_status": "Active",
+  "kyc_steps": "Profile",
+  "add_date": {
+    "$date": "2024-12-12T08:09:58.932Z"
+  },
+  "updated_on": {
+    "$date": "2024-12-19T09:28:06.326Z"
+  },
+  "applied_jobs": [
+    {
+      "job_id": {
+        "$oid": "67595b42bd3e1a973031050a"
+      },
+      "job_title": "Manager Operations",
+      "job_type": "OnContract",
+      "job_location": "Noida",
+      "job_designation": "Manager Operations",
+      "job_designation_id": {
+        "$oid": "6730436c93c167ffc0c61309"
+      },
+      "offer_ctc": 5000,
+      "original_ctc": 0,
+      "project_id": {
+        "$oid": "67446d41bfdc04d7e3432f80"
+      },
+      "project_name": "MMU-Assam",
+      "department": "CSR",
+      "recommendation": "",
+      "interview_status": "Pending",
+      "form_status": "Rejected",
+      "add_date": {
+        "$date": "2024-12-12T08:09:58.932Z"
+      },
+      "interview_type": "Offline",
+      "google_meet_link": "https://meet.google.com/djq-vcfa-qxu",
+      "venue_location": "noida",
+      "interview_host": "One-To-One",
+      "profile_details": {
+        "resume_file": "1733990998929_98998426_36123625.pdf",
+        "designation": "devops",
+        "total_experience": "12 Year(s) 0 Months",
+        "relevant_experience": "12 Year(s) 0 Months",
+        "location": "Noida",
+        "current_ctc": "56",
+        "expected_ctc": "67",
+        "notice_period": "0",
+        "current_employer": "dts"
+      },
+      "mark_as_hired": "No",
+      "offer_status": "Pending",
+      "both_address_same": "No",
+      "_id": {
+        "$oid": "675a9a567ddeb1651ada39c7"
+      },
+      "interviewer": [
+        {
+          "employee_name": "Saumya Kaushik (5341)",
+          "designation": "Manager - HR",
+          "employee_id": {
+            "$oid": "673edeabd2e1daae56bd88c5"
+          },
+          "rating": 0,
+          "status": "Accept",
+          "feedback_status": "Approved",
+          "add_date": {
+            "$date": "2024-12-12T11:33:27.947Z"
+          },
+          "updated_on": {
+            "$date": "2024-12-19T09:28:06.326Z"
+          },
+          "stage": "3nd Round",
+          "communication": 0,
+          "skills": 0,
+          "total": 22,
+          "feedback_date": {
+            "$date": "2024-12-19T00:00:00.000Z"
+          },
+          "interview_date": {
+            "$date": "2024-12-12T12:00:00.000Z"
+          },
+          "_id": {
+            "$oid": "675aca215d61049572d55241"
+          },
+          "added_by": "Mr Satya",
+          "comment": "Not Good",
+          "communication_skill": 4,
+          "creative_problem_solving": 3.5,
+          "exposure_to_job_profile": 4.5,
+          "job_knowledge": 3.5,
+          "job_match": 2.5,
+          "team_player": 4
+        },
+        {
+          "employee_name": "Saumya Kaushik (5341)",
+          "designation": "Manager - HR",
+          "employee_id": {
+            "$oid": "673edeabd2e1daae56bd88c5"
+          },
+          "rating": 0,
+          "status": "Pending",
+          "feedback_status": "Pending",
+          "add_date": {
+            "$date": "2024-12-12T11:32:27.567Z"
+          },
+          "updated_on": {
+            "$date": "2024-12-13T05:53:11.712Z"
+          },
+          "stage": "2nd Round",
+          "communication": 0,
+          "skills": 0,
+          "total": 0,
+          "feedback_date": {
+            "$date": "2024-12-13T05:53:11.712Z"
+          },
+          "interview_date": {
+            "$date": "2024-12-12T07:30:00.000Z"
+          },
+          "_id": {
+            "$oid": "675bcbc7f7bf13350ac1be8a"
+          }
+        },
+        {
+          "employee_name": "Saumya Kaushik (5341)",
+          "designation": "Manager - HR",
+          "employee_id": {
+            "$oid": "673edeabd2e1daae56bd88bd"
+          },
+          "rating": 0,
+          "status": "Pending",
+          "feedback_status": "Pending",
+          "add_date": {
+            "$date": "2024-12-13T07:18:06.945Z"
+          },
+          "stage": "1st Round",
+          "communication": 0,
+          "skills": 0,
+          "total": 0,
+          "interview_date": {
+            "$date": "2024-12-12T08:00:00.000Z"
+          },
+          "_id": {
+            "$oid": "675be06bff02aa3506fd8b9e"
+          },
+          "updated_on": {
+            "$date": "2024-12-13T07:21:15.327Z"
+          },
+          "feedback_date": {
+            "$date": "2024-12-13T07:21:15.327Z"
+          }
+        }
+      ],
+      "interview_date": {
+        "$date": "2024-12-12T08:00:00.000Z"
+      },
+      "onboard_date": {
+        "$date": "2024-12-20T00:00:00.000Z"
+      },
+      "batch_id": "",
+      "interview_duration": "15 min",
+      "stage": "1st Round",
+      "tentative_date": {
+        "$date": "2024-12-14T00:00:00.000Z"
+      },
+      "final_job_offer_approval": [
+        {
+          "employee_id": "673edeabd2e1daae56bd88bd",
+          "employee_code": "1152",
+          "designation": "National Lead - CSR",
+          "name": "Preeti Dwivedi",
+          "email": "pdwivedi@hlfppt.org",
+          "status": "",
+          "priority": 1,
+          "add_date": {
+            "$date": "2024-12-19T09:27:24.302Z"
+          },
+          "_id": {
+            "$oid": "6763e6fc1a11a824fbe5e3b7"
+          }
+        },
+        {
+          "employee_id": "673edeabd2e1daae56bd88c5",
+          "employee_code": "5341",
+          "designation": "Manager - HR",
+          "name": "Saumya Kaushik",
+          "email": "skaushik@hlfppt.org",
+          "status": "",
+          "priority": 2,
+          "add_date": {
+            "$date": "2024-12-19T09:27:24.302Z"
+          },
+          "_id": {
+            "$oid": "6763e6fc1a11a824fbe5e3b8"
+          }
+        },
+        {
+          "employee_id": "NA",
+          "employee_code": "CEO",
+          "designation": "CEO",
+          "name": "CEO Sir",
+          "email": "CEO",
+          "status": "",
+          "priority": 3,
+          "add_date": {
+            "$date": "2024-12-19T09:27:24.302Z"
+          },
+          "_id": {
+            "$oid": "6763e6fc1a11a824fbe5e3b9"
+          }
+        }
+      ]
+    }
+  ],
+  "assessment_apply_status": "disable",
+  "assessment_status": "Pending",
+  "assessment_result": "",
+  "score": 0,
+  "complete_profile_status": 40,
+  "profile_avg_rating": 7.33,
+  "page_steps": [
+    {
+      "step": 1,
+      "page": "MCQ",
+      "status": "pending",
+      "_id": {
+        "$oid": "675a9a567ddeb1651ada39c8"
+      }
+    },
+    {
+      "step": 1,
+      "page": "MCQ",
+      "status": "pending",
+      "_id": {
+        "$oid": "675a9aa37ddeb1651ada3a27"
+      }
+    }
+  ],
+  "reject_doc_reason": "",
+  "mcq_final_score": 0,
+  "mcq_score_final_result": "",
+  "mcq_attempts": "Available",
+  "comprehensive_final_score": 0,
+  "comprehensive_score_final_result": "",
+  "comprehensive_attempts": "Available",
+  "otp_sent_on": {
+    "$date": "2024-12-12T08:09:58.940Z"
+  },
+  "last_working_day": {
+    "$date": "2024-12-12T08:09:58.940Z"
+  },
+  "experience": [],
+  "education": [],
+  "docs": [],
+  "assessment_result_data": [],
+  "__v": 0,
+  "batch_id": "",
+  "verify_token": "Njc1YTlhNTY3ZGRlYjE2NTFhZGEzOWM2fDY3NWE5YTU2N2RkZWIxNjUxYWRhMzljN3xleUpoYkdjaU9pSklVekkxTmlJc0luUjVjQ0k2SWtwWFZDSjkuZXlKallXNWthV1JoZEdWZmFXUWlPaUkyTnpWaE9XRTFOamRrWkdWaU1UWTFNV0ZrWVRNNVl6WWlMQ0pxYjJKZmFXUWlPaUkyTnpWaE9XRTFOamRrWkdWaU1UWTFNV0ZrWVRNNVl6Y2lMQ0pwWVhRaU9qRTNNelF3TnpReU5EZ3NJbVY0Y0NJNk1UY3pOREE0T0RZME9IMC56QW5tc2ZYNGF3LTlIV1NmX2xSWHJfMzZQY3c0OVg3U2dXdjFsU3EzNkRZ"
+},
+{
+  "_id": {
+    "$oid": "675aa0359a5459658cf2a467"
+  },
+  "job_id": {
+    "$oid": "675a9fc720a11af17988ff29"
+  },
+  "job_title": "Medical Officer-MBBS",
+  "job_type": "OnContract",
+  "project_id": {
+    "$oid": "675a9b38265b44e4003dcb5c"
+  },
+  "project_name": "ITC",
+  "department": "CSR",
+  "name": "Amit",
+  "email": "sales@duplextech.com",
+  "mobile_no": "8090060608",
+  "total_experience": "0 Year(s) 0 Months",
+  "relevant_experience": "0 Year(s) 0 Months",
+  "location": "Lucknow",
+  "current_ctc": "0",
+  "expected_ctc": "0",
+  "notice_period": "0",
+  "resume_file": "1733992499917_32969172_57092133.pdf",
+  "social_links": [],
+  "form_status": "Rejected",
+  "profile_status": "Active",
+  "kyc_steps": "Profile",
+  "add_date": {
+    "$date": "2024-12-12T08:35:01.248Z"
+  },
+  "updated_on": {
+    "$date": "2024-12-19T11:41:35.344Z"
+  },
+  "applied_jobs": [
+    {
+      "job_id": {
+        "$oid": "675a9fc720a11af17988ff29"
+      },
+      "job_title": "Medical Officer-MBBS",
+      "job_type": "OnContract",
+      "job_location": "Lucknow",
+      "job_designation": "Consultant - MO",
+      "job_designation_id": {
+        "$oid": "6730493093c167ffc0c6144f"
+      },
+      "offer_ctc": 0,
+      "original_ctc": 0,
+      "project_id": {
+        "$oid": "675a9b38265b44e4003dcb5c"
+      },
+      "project_name": "ITC",
+      "department": "CSR",
+      "recommendation": "",
+      "interview_status": "Pending",
+      "form_status": "Rejected",
+      "add_date": {
+        "$date": "2024-12-12T08:35:01.248Z"
+      },
+      "interview_type": "",
+      "google_meet_link": "",
+      "venue_location": "noida office",
+      "interview_host": "",
+      "profile_details": {
+        "resume_file": "1733992499917_32969172_57092133.pdf",
+        "total_experience": "0 Year(s) 0 Months",
+        "relevant_experience": "0 Year(s) 0 Months",
+        "location": "Lucknow",
+        "notice_period": "0"
+      },
+      "mark_as_hired": "No",
+      "offer_status": "",
+      "both_address_same": "No",
+      "_id": {
+        "$oid": "675aa0359a5459658cf2a468"
+      },
+      "interviewer": [],
+      "interview_date": {
+        "$date": "2024-12-13T03:30:00.000Z"
+      },
+      "onboard_date": {
+        "$date": "2024-12-12T08:35:01.262Z"
+      },
+      "batch_id": "",
+      "interview_duration": "30 min",
+      "stage": "",
+      "final_job_offer_approval": [
+        {
+          "employee_id": "673edeabd2e1daae56bd88bd",
+          "employee_code": "1152",
+          "designation": "National Lead - CSR",
+          "name": "Preeti Dwivedi",
+          "email": "pdwivedi@hlfppt.org",
+          "status": "",
+          "priority": 1,
+          "add_date": {
+            "$date": "2024-12-19T11:49:18.340Z"
+          },
+          "_id": {
+            "$oid": "6764083e214cf789b504cf85"
+          }
+        },
+        {
+          "employee_id": "673edeabd2e1daae56bd88c7",
+          "employee_code": "5490",
+          "designation": "Manager -CSR",
+          "name": "Chahat Gandotra",
+          "email": "cgandotra@hlfppt.org",
+          "status": "",
+          "priority": 2,
+          "add_date": {
+            "$date": "2024-12-19T11:49:18.340Z"
+          },
+          "_id": {
+            "$oid": "6764083e214cf789b504cf86"
+          }
+        },
+        {
+          "employee_id": "NA",
+          "employee_code": "CEO",
+          "designation": "CEO",
+          "name": "CEO Sir",
+          "email": "CEO",
+          "status": "",
+          "priority": 3,
+          "add_date": {
+            "$date": "2024-12-19T11:49:18.340Z"
+          },
+          "_id": {
+            "$oid": "6764083e214cf789b504cf87"
+          }
+        }
+      ],
+      "final_job_offer_approval_status": "No"
+    }
+  ],
+  "assessment_apply_status": "disable",
+  "assessment_status": "Pending",
+  "assessment_result": "",
+  "score": 0,
+  "complete_profile_status": 40,
+  "profile_avg_rating": 0,
+  "page_steps": [
+    {
+      "step": 1,
+      "page": "MCQ",
+      "status": "pending",
+      "_id": {
+        "$oid": "675aa0359a5459658cf2a469"
+      }
+    },
+    {
+      "step": 1,
+      "page": "MCQ",
+      "status": "pending",
+      "_id": {
+        "$oid": "675aa09e9a5459658cf2a4f5"
+      }
+    },
+    {
+      "step": 1,
+      "page": "MCQ",
+      "status": "pending",
+      "_id": {
+        "$oid": "6764066f3a33fd95b6d63268"
+      }
+    }
+  ],
+  "reject_doc_reason": "",
+  "mcq_final_score": 0,
+  "mcq_score_final_result": "",
+  "mcq_attempts": "Available",
+  "comprehensive_final_score": 0,
+  "comprehensive_score_final_result": "",
+  "comprehensive_attempts": "Available",
+  "otp_sent_on": {
+    "$date": "2024-12-12T08:35:01.264Z"
+  },
+  "last_working_day": {
+    "$date": "2024-12-12T08:35:01.264Z"
+  },
+  "experience": [],
+  "education": [],
+  "docs": [],
+  "assessment_result_data": [],
+  "__v": 0,
+  "batch_id": ""
+},
+{
+  "_id": {
+    "$oid": "676063df0a19a0d2909f26c8"
+  },
+  "job_id": {
+    "$oid": "675a9fc720a11af17988ff29"
+  },
+  "job_title": "Medical Officer-MBBS",
+  "job_type": "OnContract",
+  "project_id": {
+    "$oid": "675a9b38265b44e4003dcb5c"
+  },
+  "project_name": "ITC",
+  "department": "CSR",
+  "name": "Drashok kumar",
+  "email": "dr.ashokbarmer@gmail.com",
+  "mobile_no": "7357542583",
+  "total_experience": "2 Year(s) 0 Months",
+  "relevant_experience": "0 Year(s) 6 Months",
+  "location": "Ajmer",
+  "current_ctc": "82000",
+  "expected_ctc": "85000",
+  "notice_period": "15",
+  "resume_file": "1734370271340_86105092_95413902.ashok_barmer_.pdf",
+  "social_links": [
+    {
+      "brand": "facebook",
+      "link": "",
+      "_id": {
+        "$oid": "676066000a19a0d2909f26e7"
+      }
+    },
+    {
+      "brand": "linkedin",
+      "link": "",
+      "_id": {
+        "$oid": "676066000a19a0d2909f26e8"
+      }
+    }
+  ],
+  "form_status": "Shortlisted",
+  "profile_status": "Active",
+  "kyc_steps": "Complete",
+  "add_date": {
+    "$date": "2024-12-16T17:31:11.450Z"
+  },
+  "updated_on": {
+    "$date": "2024-12-17T06:31:38.216Z"
+  },
+  "applied_jobs": [
+    {
+      "job_id": {
+        "$oid": "675a9fc720a11af17988ff29"
+      },
+      "job_title": "Medical Officer-MBBS",
+      "job_type": "OnContract",
+      "job_location": "Ajmer",
+      "job_designation": "Consultant - MO",
+      "job_designation_id": {
+        "$oid": "6730493093c167ffc0c6144f"
+      },
+      "offer_ctc": 0,
+      "original_ctc": 0,
+      "project_id": {
+        "$oid": "675a9b38265b44e4003dcb5c"
+      },
+      "project_name": "ITC",
+      "department": "CSR",
+      "recommendation": "",
+      "interview_status": "Pending",
+      "form_status": "Shortlisted",
+      "add_date": {
+        "$date": "2024-12-16T17:31:11.450Z"
+      },
+      "interview_type": "Online",
+      "google_meet_link": "",
+      "venue_location": "",
+      "interview_host": "One-To-One",
+      "profile_details": {
+        "resume_file": "1734370271340_86105092_95413902.ashok_barmer_.pdf",
+        "total_experience": "0 Year(s) 0 Months",
+        "relevant_experience": "0 Year(s) 0 Months",
+        "location": "Ajmer",
+        "notice_period": "0"
+      },
+      "mark_as_hired": "No",
+      "offer_status": "",
+      "both_address_same": "No",
+      "_id": {
+        "$oid": "676063df0a19a0d2909f26c9"
+      },
+      "interviewer": [],
+      "interview_date": {
+        "$date": "2024-12-16T17:31:11.455Z"
+      },
+      "onboard_date": {
+        "$date": "2024-12-16T17:31:11.456Z"
+      },
+      "batch_id": "",
+      "final_job_offer_approval": [
+        {
+          "employee_id": "673edeabd2e1daae56bd88bd",
+          "employee_code": "1152",
+          "designation": "National Lead - CSR",
+          "name": "Preeti Dwivedi",
+          "email": "pdwivedi@hlfppt.org",
+          "status": "",
+          "priority": 1,
+          "add_date": {
+            "$date": "2024-12-19T09:24:47.189Z"
+          },
+          "_id": {
+            "$oid": "6763e65f1a11a824fbe5e384"
+          }
+        },
+        {
+          "employee_id": "673edeabd2e1daae56bd88c7",
+          "employee_code": "5490",
+          "designation": "Manager -CSR",
+          "name": "Chahat Gandotra",
+          "email": "cgandotra@hlfppt.org",
+          "status": "",
+          "priority": 2,
+          "add_date": {
+            "$date": "2024-12-19T09:24:47.189Z"
+          },
+          "_id": {
+            "$oid": "6763e65f1a11a824fbe5e385"
+          }
+        },
+        {
+          "employee_id": "NA",
+          "employee_code": "CEO",
+          "designation": "CEO",
+          "name": "CEO Sir",
+          "email": "CEO",
+          "status": "",
+          "priority": 3,
+          "add_date": {
+            "$date": "2024-12-19T09:24:47.189Z"
+          },
+          "_id": {
+            "$oid": "6763e65f1a11a824fbe5e386"
+          }
+        }
+      ]
+    }
+  ],
+  "assessment_apply_status": "disable",
+  "assessment_status": "Pending",
+  "assessment_result": "",
+  "score": 0,
+  "complete_profile_status": 100,
+  "profile_avg_rating": 0,
+  "page_steps": [
+    {
+      "step": 1,
+      "page": "MCQ",
+      "status": "pending",
+      "_id": {
+        "$oid": "676063df0a19a0d2909f26ca"
+      }
+    },
+    {
+      "step": 1,
+      "page": "MCQ",
+      "status": "pending",
+      "_id": {
+        "$oid": "67611aca0a19a0d2909f2e0b"
+      }
+    }
+  ],
+  "reject_doc_reason": "",
+  "mcq_final_score": 0,
+  "mcq_score_final_result": "",
+  "mcq_attempts": "Available",
+  "comprehensive_final_score": 0,
+  "comprehensive_score_final_result": "",
+  "comprehensive_attempts": "Available",
+  "otp_sent_on": {
+    "$date": "2024-12-16T17:32:14.875Z"
+  },
+  "last_working_day": {
+    "$date": "2024-12-16T17:31:11.456Z"
+  },
+  "experience": [
+    {
+      "designation": "Medical officer ",
+      "company": "The hans foundation ",
+      "from_date": {
+        "$date": "2024-06-18T00:00:00.000Z"
+      },
+      "to_date": {
+        "$date": "2024-12-16T00:00:00.000Z"
+      },
+      "responsibility": "I’m working in The Hans foundation MMU for rural community in karauli district.",
+      "is_currently_working": "Yes",
+      "_id": {
+        "$oid": "676066000a19a0d2909f26ea"
+      }
+    },
+    {
+      "designation": "RMO",
+      "company": "Shree Ram Hospital Bhooniya Barmer",
+      "from_date": {
+        "$date": "2024-02-20T00:00:00.000Z"
+      },
+      "to_date": {
+        "$date": "2024-06-12T00:00:00.000Z"
+      },
+      "responsibility": "I have done duty in hospital as Resident medical officer in BARMER .",
+      "is_currently_working": "No",
+      "_id": {
+        "$oid": "676066000a19a0d2909f26eb"
+      }
+    }
+  ],
+  "education": [
+    {
+      "institute": "Uzhhorod national university ",
+      "degree": "MBBS",
+      "from_date": {
+        "$date": "2016-09-21T00:00:00.000Z"
+      },
+      "to_date": {
+        "$date": "2022-06-16T00:00:00.000Z"
+      },
+      "add_date": {
+        "$date": "2024-12-16T17:40:16.002Z"
+      },
+      "_id": {
+        "$oid": "676066000a19a0d2909f26e9"
+      }
+    }
+  ],
+  "docs": [
+    {
+      "doc_category": "KYC",
+      "sub_doc_category": "Document",
+      "doc_name": "Photo",
+      "file_name": "1734370888851_76497448_16690555.jpg",
+      "mime_type": "jpeg",
+      "file_size": "3.17 KB",
+      "add_date": {
+        "$date": "2024-12-16T17:41:28.955Z"
+      },
+      "status": "complete",
+      "_id": {
+        "$oid": "676066480a19a0d2909f26f3"
+      },
+      "updated_on": {
+        "$date": "2024-12-16T17:41:28.956Z"
+      }
+    },
+    {
+      "doc_category": "KYC",
+      "sub_doc_category": "Document",
+      "doc_name": "Aadhar Front",
+      "file_name": "1734371303472_19440921_50276559.png",
+      "mime_type": "png",
+      "file_size": "84.04 KB",
+      "add_date": {
+        "$date": "2024-12-16T17:48:24.000Z"
+      },
+      "status": "complete",
+      "_id": {
+        "$oid": "676067e80a19a0d2909f271e"
+      },
+      "updated_on": {
+        "$date": "2024-12-16T17:48:24.001Z"
+      }
+    },
+    {
+      "doc_category": "KYC",
+      "sub_doc_category": "Document",
+      "doc_name": "Aadhar Back",
+      "file_name": "1734371327588_50539701_87876820.png",
+      "mime_type": "png",
+      "file_size": "101.76 KB",
+      "add_date": {
+        "$date": "2024-12-16T17:48:48.057Z"
+      },
+      "status": "complete",
+      "_id": {
+        "$oid": "676068000a19a0d2909f2726"
+      },
+      "updated_on": {
+        "$date": "2024-12-16T17:48:48.057Z"
+      }
+    },
+    {
+      "doc_category": "KYC",
+      "sub_doc_category": "Document",
+      "doc_name": "Pancard",
+      "file_name": "1734371358911_13889016_84438509.png",
+      "mime_type": "png",
+      "file_size": "224.22 KB",
+      "add_date": {
+        "$date": "2024-12-16T17:49:19.751Z"
+      },
+      "status": "complete",
+      "_id": {
+        "$oid": "6760681f0a19a0d2909f2730"
+      },
+      "updated_on": {
+        "$date": "2024-12-16T17:49:19.752Z"
+      }
+    },
+    {
+      "doc_category": "Educational",
+      "sub_doc_category": "Marksheet",
+      "doc_name": "10th Marksheet",
+      "file_name": "1734371469966_34115919_89952524.png",
+      "mime_type": "png",
+      "file_size": "227.13 KB",
+      "add_date": {
+        "$date": "2024-12-16T17:51:10.828Z"
+      },
+      "status": "complete",
+      "_id": {
+        "$oid": "6760688e0a19a0d2909f273c"
+      },
+      "updated_on": {
+        "$date": "2024-12-16T17:51:10.828Z"
+      }
+    },
+    {
+      "doc_category": "Educational",
+      "sub_doc_category": "Marksheet",
+      "doc_name": "12th Marksheet",
+      "file_name": "1734371487320_83404189_14122697.png",
+      "mime_type": "png",
+      "file_size": "107.51 KB",
+      "add_date": {
+        "$date": "2024-12-16T17:51:27.814Z"
+      },
+      "status": "complete",
+      "_id": {
+        "$oid": "6760689f0a19a0d2909f274b"
+      },
+      "updated_on": {
+        "$date": "2024-12-16T17:51:27.815Z"
+      }
+    },
+    {
+      "doc_category": "Educational",
+      "sub_doc_category": "Marksheet",
+      "doc_name": "Graduation Marksheet",
+      "file_name": "1734371514408_66023484_85526351.png",
+      "mime_type": "png",
+      "file_size": "349.17 KB",
+      "add_date": {
+        "$date": "2024-12-16T17:51:56.216Z"
+      },
+      "status": "complete",
+      "_id": {
+        "$oid": "676068bc0a19a0d2909f275b"
+      },
+      "updated_on": {
+        "$date": "2024-12-16T17:51:56.217Z"
+      }
+    },
+    {
+      "doc_category": "Experience",
+      "sub_doc_category": "Letter",
+      "doc_name": "Salary Slip",
+      "file_name": "1734371653735_96967329_61785909.png",
+      "mime_type": "png",
+      "file_size": "42.09 KB",
+      "add_date": {
+        "$date": "2024-12-16T17:54:14.086Z"
+      },
+      "status": "complete",
+      "_id": {
+        "$oid": "676069460a19a0d2909f276d"
+      },
+      "updated_on": {
+        "$date": "2024-12-16T17:54:14.087Z"
+      }
+    }
+  ],
+  "assessment_result_data": [],
+  "__v": 0,
+  "otp": 0,
+  "last_login": {
+    "$date": "2024-12-16T17:32:43.178Z"
+  },
+  "login_device": "web",
+  "applied_from": "Online",
+  "current_employer": "",
+  "designation": "Medical officer",
+  "other": "",
+  "photo": "1734370815986_65496266_40069881.jpg",
+  "reference_employee": "Na",
+  "batch_id": ""
+},
+{
+  "_id": {
+    "$oid": "676162740a19a0d2909f35ee"
+  },
+  "job_id": {
+    "$oid": "67615ee00a19a0d2909f33f1"
+  },
+  "job_title": "Finance Officer",
+  "job_type": "OnRole",
+  "project_id": {
+    "$oid": "6756c77d03614a9006479bfb"
+  },
+  "project_name": "GFATM HIV/AIDS & TB",
+  "department": "",
+  "name": "babita",
+  "email": "babita.chauhan222@gmail.com",
+  "mobile_no": "8010575278",
+  "designation": "Finance Officer",
+  "total_experience": "8 Year(s)",
+  "relevant_experience": "8 Year(s)",
+  "location": "Noida",
+  "current_ctc": "Rs 5.50 Lakhs",
+  "expected_ctc": "Negotiable",
+  "notice_period": "1",
+  "current_employer": "Exl services pvt Ltd",
+  "current_employer_mobile": "",
+  "last_working_day": {
+    "$date": "2024-12-17T11:37:24.818Z"
+  },
+  "applied_from": "Naukri",
+  "reference_employee": "",
+  "form_status": "Shortlisted",
+  "profile_status": "Active",
+  "kyc_steps": "Profile",
+  "add_date": {
+    "$date": "2024-12-17T11:37:24.818Z"
+  },
+  "updated_on": {
+    "$date": "2024-12-17T11:41:06.834Z"
+  },
+  "applied_jobs": [
+    {
+      "job_id": {
+        "$oid": "67615ee00a19a0d2909f33f1"
+      },
+      "job_title": "Finance Officer",
+      "job_type": "OnRole",
+      "job_location": "Noida , Uttar Pradesh",
+      "job_designation": "Finance Officer",
+      "job_designation_id": {
+        "$oid": "673041a393c167ffc0c61290"
+      },
+      "offer_ctc": 0,
+      "original_ctc": 960000,
+      "project_id": {
+        "$oid": "6756c77d03614a9006479bfb"
+      },
+      "project_name": "GFATM HIV/AIDS & TB",
+      "department": "Finance",
+      "recommendation": "",
+      "interview_status": "Pending",
+      "form_status": "Shortlisted",
+      "add_date": {
+        "$date": "2024-12-17T11:37:24.818Z"
+      },
+      "interview_type": "Online",
+      "google_meet_link": "",
+      "venue_location": "",
+      "interview_host": "One-To-One",
+      "mark_as_hired": "No",
+      "offer_status": "",
+      "both_address_same": "No",
+      "_id": {
+        "$oid": "676162740a19a0d2909f35ef"
+      },
+      "interviewer": [],
+      "interview_date": {
+        "$date": "2024-12-17T11:37:24.826Z"
+      },
+      "onboard_date": {
+        "$date": "2024-12-17T11:37:24.826Z"
+      },
+      "batch_id": "122024"
+    }
+  ],
+  "assessment_apply_status": "enable",
+  "assessment_status": "Pending",
+  "assessment_result": "",
+  "score": 0,
+  "complete_profile_status": 40,
+  "profile_avg_rating": 0,
+  "page_steps": [
+    {
+      "step": 1,
+      "page": "MCQ",
+      "status": "pending",
+      "_id": {
+        "$oid": "676162740a19a0d2909f35f0"
+      }
+    },
+    {
+      "step": 1,
+      "page": "MCQ",
+      "status": "pending",
+      "_id": {
+        "$oid": "676162d30a19a0d2909f3685"
+      }
+    }
+  ],
+  "reject_doc_reason": "",
+  "mcq_final_score": 0,
+  "mcq_score_final_result": "",
+  "mcq_attempts": "Available",
+  "comprehensive_final_score": 0,
+  "comprehensive_score_final_result": "",
+  "comprehensive_attempts": "Available",
+  "otp_sent_on": {
+    "$date": "2024-12-17T11:37:24.827Z"
+  },
+  "experience": [],
+  "education": [],
+  "social_links": [],
+  "docs": [],
+  "assessment_result_data": [],
+  "__v": 0,
+  "batch_id": "122024",
+  "resume_file": "1734435666226_65202250_20617410.pdf"
+},
+{
+  "_id": {
+    "$oid": "676162740a19a0d2909f35f2"
+  },
+  "job_id": {
+    "$oid": "67615ee00a19a0d2909f33f1"
+  },
+  "job_title": "Finance Officer",
+  "job_type": "OnRole",
+  "project_id": {
+    "$oid": "6756c77d03614a9006479bfb"
+  },
+  "project_name": "GFATM HIV/AIDS & TB",
+  "department": "",
+  "name": "Kishore",
+  "email": "k.kishorekumar1987@gmail.com, kishore_510@rediffmail.com",
+  "mobile_no": "8307863516",
+  "designation": "Finance Officer",
+  "total_experience": "17 Year(s)",
+  "relevant_experience": "17 Year(s)",
+  "location": "New Delhi",
+  "current_ctc": "Rs 12 Lakhs",
+  "expected_ctc": "Negotiable",
+  "notice_period": "1",
+  "current_employer": "91Springboard Business Hub Private Limited",
+  "current_employer_mobile": "",
+  "last_working_day": {
+    "$date": "2024-12-17T11:37:24.818Z"
+  },
+  "applied_from": "Naukri",
+  "reference_employee": "",
+  "form_status": "Shortlisted",
+  "profile_status": "Active",
+  "kyc_steps": "Profile",
+  "add_date": {
+    "$date": "2024-12-17T11:37:24.818Z"
+  },
+  "updated_on": {
+    "$date": "2024-12-17T11:41:26.007Z"
+  },
+  "applied_jobs": [
+    {
+      "job_id": {
+        "$oid": "67615ee00a19a0d2909f33f1"
+      },
+      "job_title": "Finance Officer",
+      "job_type": "OnRole",
+      "job_location": "Noida , Uttar Pradesh",
+      "job_designation": "Finance Officer",
+      "job_designation_id": {
+        "$oid": "673041a393c167ffc0c61290"
+      },
+      "offer_ctc": 0,
+      "original_ctc": 960000,
+      "project_id": {
+        "$oid": "6756c77d03614a9006479bfb"
+      },
+      "project_name": "GFATM HIV/AIDS & TB",
+      "department": "Finance",
+      "recommendation": "",
+      "interview_status": "Pending",
+      "form_status": "Shortlisted",
+      "add_date": {
+        "$date": "2024-12-17T11:37:24.818Z"
+      },
+      "interview_type": "Online",
+      "google_meet_link": "",
+      "venue_location": "",
+      "interview_host": "One-To-One",
+      "mark_as_hired": "No",
+      "offer_status": "",
+      "both_address_same": "No",
+      "_id": {
+        "$oid": "676162740a19a0d2909f35f3"
+      },
+      "interviewer": [],
+      "interview_date": {
+        "$date": "2024-12-17T11:37:24.832Z"
+      },
+      "onboard_date": {
+        "$date": "2024-12-17T11:37:24.832Z"
+      },
+      "batch_id": "122024"
+    }
+  ],
+  "assessment_apply_status": "enable",
+  "assessment_status": "Pending",
+  "assessment_result": "",
+  "score": 0,
+  "complete_profile_status": 40,
+  "profile_avg_rating": 0,
+  "page_steps": [
+    {
+      "step": 1,
+      "page": "MCQ",
+      "status": "pending",
+      "_id": {
+        "$oid": "676162740a19a0d2909f35f4"
+      }
+    },
+    {
+      "step": 1,
+      "page": "MCQ",
+      "status": "pending",
+      "_id": {
+        "$oid": "676162d30a19a0d2909f3683"
+      }
+    }
+  ],
+  "reject_doc_reason": "",
+  "mcq_final_score": 0,
+  "mcq_score_final_result": "",
+  "mcq_attempts": "Available",
+  "comprehensive_final_score": 0,
+  "comprehensive_score_final_result": "",
+  "comprehensive_attempts": "Available",
+  "otp_sent_on": {
+    "$date": "2024-12-17T11:37:24.832Z"
+  },
+  "experience": [],
+  "education": [],
+  "social_links": [],
+  "docs": [],
+  "assessment_result_data": [],
+  "__v": 0,
+  "batch_id": "122024",
+  "resume_file": "1734435685993_78572134_66788399.pdf"
+},
+{
+  "_id": {
+    "$oid": "676162740a19a0d2909f35f6"
+  },
+  "job_id": {
+    "$oid": "67615ee00a19a0d2909f33f1"
+  },
+  "job_title": "Finance Officer",
+  "job_type": "OnRole",
+  "project_id": {
+    "$oid": "6756c77d03614a9006479bfb"
+  },
+  "project_name": "GFATM HIV/AIDS & TB",
+  "department": "",
+  "name": "SOURABH JAIN",
+  "email": "mail4sourabh01@gmail.com, kailash.vaid@gamil.com",
+  "mobile_no": "9636695100",
+  "designation": "Finance Officer",
+  "total_experience": "14 Year(s)",
+  "relevant_experience": "14 Year(s)",
+  "location": "Jaipur",
+  "current_ctc": "Rs 8.50 Lakhs",
+  "expected_ctc": "Negotiable",
+  "notice_period": "1",
+  "current_employer": "Aov International",
+  "current_employer_mobile": "",
+  "last_working_day": {
+    "$date": "2024-12-17T11:37:24.818Z"
+  },
+  "applied_from": "Naukri",
+  "reference_employee": "",
+  "form_status": "Shortlisted",
+  "profile_status": "Active",
+  "kyc_steps": "Profile",
+  "add_date": {
+    "$date": "2024-12-17T11:37:24.818Z"
+  },
+  "updated_on": {
+    "$date": "2024-12-18T10:31:13.274Z"
+  },
+  "applied_jobs": [
+    {
+      "job_id": {
+        "$oid": "67615ee00a19a0d2909f33f1"
+      },
+      "job_title": "Finance Officer",
+      "job_type": "OnRole",
+      "job_location": "Noida , Uttar Pradesh",
+      "job_designation": "Finance Officer",
+      "job_designation_id": {
+        "$oid": "673041a393c167ffc0c61290"
+      },
+      "offer_ctc": 0,
+      "original_ctc": 960000,
+      "project_id": {
+        "$oid": "6756c77d03614a9006479bfb"
+      },
+      "project_name": "GFATM HIV/AIDS & TB",
+      "department": "Finance",
+      "recommendation": "",
+      "interview_status": "Pending",
+      "form_status": "Shortlisted",
+      "add_date": {
+        "$date": "2024-12-17T11:37:24.818Z"
+      },
+      "interview_type": "Online",
+      "google_meet_link": "",
+      "venue_location": "",
+      "interview_host": "One-To-One",
+      "mark_as_hired": "No",
+      "offer_status": "",
+      "both_address_same": "No",
+      "_id": {
+        "$oid": "676162740a19a0d2909f35f7"
+      },
+      "interviewer": [],
+      "interview_date": {
+        "$date": "2024-12-17T11:37:24.836Z"
+      },
+      "onboard_date": {
+        "$date": "2024-12-17T11:37:24.836Z"
+      },
+      "batch_id": "122024"
+    }
+  ],
+  "assessment_apply_status": "enable",
+  "assessment_status": "Pending",
+  "assessment_result": "",
+  "score": 0,
+  "complete_profile_status": 40,
+  "profile_avg_rating": 0,
+  "page_steps": [
+    {
+      "step": 1,
+      "page": "MCQ",
+      "status": "pending",
+      "_id": {
+        "$oid": "676162740a19a0d2909f35f8"
+      }
+    },
+    {
+      "step": 1,
+      "page": "MCQ",
+      "status": "pending",
+      "_id": {
+        "$oid": "676162d30a19a0d2909f3681"
+      }
+    }
+  ],
+  "reject_doc_reason": "",
+  "mcq_final_score": 0,
+  "mcq_score_final_result": "",
+  "mcq_attempts": "Available",
+  "comprehensive_final_score": 0,
+  "comprehensive_score_final_result": "",
+  "comprehensive_attempts": "Available",
+  "otp_sent_on": {
+    "$date": "2024-12-17T11:37:24.836Z"
+  },
+  "experience": [],
+  "education": [],
+  "social_links": [],
+  "docs": [],
+  "assessment_result_data": [],
+  "__v": 0,
+  "batch_id": "122024",
+  "resume_file": "1734517872246_14390274_33500032.pdf"
+},
+{
+  "_id": {
+    "$oid": "676162740a19a0d2909f35fa"
+  },
+  "job_id": {
+    "$oid": "67615ee00a19a0d2909f33f1"
+  },
+  "job_title": "Finance Officer",
+  "job_type": "OnRole",
+  "project_id": {
+    "$oid": "6756c77d03614a9006479bfb"
+  },
+  "project_name": "GFATM HIV/AIDS & TB",
+  "department": "",
+  "name": "Nitish choudhary",
+  "email": "chaudharynitish04@gmail.com",
+  "mobile_no": "9868084480",
+  "designation": "Finance Officer",
+  "total_experience": "6 Year(s)",
+  "relevant_experience": "6 Year(s)",
+  "location": "New Delhi",
+  "current_ctc": "Rs 6.27 Lakhs",
+  "expected_ctc": "Negotiable",
+  "notice_period": "1",
+  "current_employer": "Total Marketing Support",
+  "current_employer_mobile": "",
+  "last_working_day": {
+    "$date": "2024-12-17T11:37:24.818Z"
+  },
+  "applied_from": "Naukri",
+  "reference_employee": "",
+  "form_status": "Shortlisted",
+  "profile_status": "Active",
+  "kyc_steps": "Profile",
+  "add_date": {
+    "$date": "2024-12-17T11:37:24.818Z"
+  },
+  "updated_on": {
+    "$date": "2024-12-18T10:31:49.438Z"
+  },
+  "applied_jobs": [
+    {
+      "job_id": {
+        "$oid": "67615ee00a19a0d2909f33f1"
+      },
+      "job_title": "Finance Officer",
+      "job_type": "OnRole",
+      "job_location": "Noida , Uttar Pradesh",
+      "job_designation": "Finance Officer",
+      "job_designation_id": {
+        "$oid": "673041a393c167ffc0c61290"
+      },
+      "offer_ctc": 0,
+      "original_ctc": 960000,
+      "project_id": {
+        "$oid": "6756c77d03614a9006479bfb"
+      },
+      "project_name": "GFATM HIV/AIDS & TB",
+      "department": "Finance",
+      "recommendation": "",
+      "interview_status": "Pending",
+      "form_status": "Shortlisted",
+      "add_date": {
+        "$date": "2024-12-17T11:37:24.818Z"
+      },
+      "interview_type": "Online",
+      "google_meet_link": "",
+      "venue_location": "",
+      "interview_host": "One-To-One",
+      "mark_as_hired": "No",
+      "offer_status": "",
+      "both_address_same": "No",
+      "_id": {
+        "$oid": "676162740a19a0d2909f35fb"
+      },
+      "interviewer": [],
+      "interview_date": {
+        "$date": "2024-12-17T11:37:24.839Z"
+      },
+      "onboard_date": {
+        "$date": "2024-12-17T11:37:24.839Z"
+      },
+      "batch_id": "122024",
+      "final_job_offer_approval": [
+        {
+          "employee_id": "673edeabd2e1daae56bd88c4",
+          "employee_code": "5258",
+          "designation": "Project Director",
+          "name": "Sangita Pandey",
+          "email": "psangita@hlfppt.org",
+          "status": "",
+          "priority": 1,
+          "add_date": {
+            "$date": "2024-12-23T04:29:40.844Z"
+          },
+          "_id": {
+            "$oid": "6768e734851e8f5819b4e262"
+          }
+        },
+        {
+          "employee_id": "673edeabd2e1daae56bd88d6",
+          "employee_code": "7660",
+          "designation": "Project Lead- TB",
+          "name": "Chaturanand  Thakur",
+          "email": "cthakur@hlfppt.org",
+          "status": "",
+          "priority": 2,
+          "add_date": {
+            "$date": "2024-12-23T04:29:40.844Z"
+          },
+          "_id": {
+            "$oid": "6768e734851e8f5819b4e263"
+          }
+        },
+        {
+          "employee_id": "NA",
+          "employee_code": "CEO",
+          "designation": "CEO",
+          "name": "CEO Sir",
+          "email": "CEO",
+          "status": "",
+          "priority": 3,
+          "add_date": {
+            "$date": "2024-12-23T04:29:40.844Z"
+          },
+          "_id": {
+            "$oid": "6768e734851e8f5819b4e264"
+          }
+        }
+      ]
+    }
+  ],
+  "assessment_apply_status": "enable",
+  "assessment_status": "Pending",
+  "assessment_result": "",
+  "score": 0,
+  "complete_profile_status": 40,
+  "profile_avg_rating": 0,
+  "page_steps": [
+    {
+      "step": 1,
+      "page": "MCQ",
+      "status": "pending",
+      "_id": {
+        "$oid": "676162740a19a0d2909f35fc"
+      }
+    },
+    {
+      "step": 1,
+      "page": "MCQ",
+      "status": "pending",
+      "_id": {
+        "$oid": "676162d30a19a0d2909f367f"
+      }
+    }
+  ],
+  "reject_doc_reason": "",
+  "mcq_final_score": 0,
+  "mcq_score_final_result": "",
+  "mcq_attempts": "Available",
+  "comprehensive_final_score": 0,
+  "comprehensive_score_final_result": "",
+  "comprehensive_attempts": "Available",
+  "otp_sent_on": {
+    "$date": "2024-12-17T11:37:24.840Z"
+  },
+  "experience": [],
+  "education": [],
+  "social_links": [],
+  "docs": [],
+  "assessment_result_data": [],
+  "__v": 0,
+  "batch_id": "122024",
+  "resume_file": "1734517908219_70726604_45341531.pdf"
+},
+{
+  "_id": {
+    "$oid": "676162740a19a0d2909f35fe"
+  },
+  "job_id": {
+    "$oid": "67615ee00a19a0d2909f33f1"
+  },
+  "job_title": "Finance Officer",
+  "job_type": "OnRole",
+  "project_id": {
+    "$oid": "6756c77d03614a9006479bfb"
+  },
+  "project_name": "GFATM HIV/AIDS & TB",
+  "department": "",
+  "name": "Shubham Aggarwal",
+  "email": "aggarwal453@gmail.com",
+  "mobile_no": "9015691774",
+  "designation": "Finance Officer",
+  "total_experience": "7.5 Year(s)",
+  "relevant_experience": "7.5 Year(s)",
+  "location": "New Delhi",
+  "current_ctc": "Rs 5.10 Lakhs",
+  "expected_ctc": "Negotiable",
+  "notice_period": "15",
+  "current_employer": "Bluetown India Pvt Ltd",
+  "current_employer_mobile": "",
+  "last_working_day": {
+    "$date": "2024-12-17T11:37:24.819Z"
+  },
+  "applied_from": "Naukri",
+  "reference_employee": "",
+  "form_status": "Interview",
+  "profile_status": "Active",
+  "kyc_steps": "Profile",
+  "add_date": {
+    "$date": "2024-12-17T11:37:24.819Z"
+  },
+  "updated_on": {
+    "$date": "2024-12-19T11:51:12.923Z"
+  },
+  "applied_jobs": [
+    {
+      "job_id": {
+        "$oid": "67615ee00a19a0d2909f33f1"
+      },
+      "job_title": "Finance Officer",
+      "job_type": "OnRole",
+      "job_location": "Noida , Uttar Pradesh",
+      "job_designation": "Finance Officer",
+      "job_designation_id": {
+        "$oid": "673041a393c167ffc0c61290"
+      },
+      "offer_ctc": 0,
+      "original_ctc": 960000,
+      "project_id": {
+        "$oid": "6756c77d03614a9006479bfb"
+      },
+      "project_name": "GFATM HIV/AIDS & TB",
+      "department": "Finance",
+      "recommendation": "",
+      "interview_status": "Pending",
+      "form_status": "Interview",
+      "add_date": {
+        "$date": "2024-12-17T11:37:24.818Z"
+      },
+      "interview_type": "Online",
+      "google_meet_link": "https://meet.google.com/ewy-udun-qnv",
+      "venue_location": "",
+      "interview_host": "Panel",
+      "mark_as_hired": "No",
+      "offer_status": "",
+      "both_address_same": "No",
+      "_id": {
+        "$oid": "676162740a19a0d2909f35ff"
+      },
+      "interviewer": [
+        {
+          "employee_name": "Ajay Kumar Jha (6851)",
+          "designation": "Associate National Lead - Finance & Accounts",
+          "employee_id": {
+            "$oid": "673edeabd2e1daae56bd88c9"
+          },
+          "rating": 0,
+          "job_match": 4,
+          "job_knowledge": 8,
+          "creative_problem_solving": 8,
+          "team_player": 3.5,
+          "communication_skill": 6,
+          "exposure_to_job_profile": 7,
+          "status": "Accept",
+          "feedback_status": "Approved",
+          "add_date": {
+            "$date": "2024-12-19T11:50:24.966Z"
+          },
+          "stage": "1st Round",
+          "communication": 0,
+          "skills": 0,
+          "total": 36.5,
+          "interview_date": {
+            "$date": "2024-12-19T12:00:00.000Z"
+          },
+          "_id": {
+            "$oid": "67640880bf5574c659d19bdd"
+          },
+          "updated_on": {
+            "$date": "2024-12-19T11:50:47.661Z"
+          },
+          "feedback_date": {
+            "$date": "2024-12-19T00:00:00.000Z"
+          },
+          "added_by": "Gaurav Pachouri",
+          "comment": "Okay"
+        },
+        {
+          "employee_name": "Ajay Kumar Sharma (6587)",
+          "designation": "Senior Manager - HR",
+          "employee_id": {
+            "$oid": "673edeabd2e1daae56bd88c8"
+          },
+          "rating": 0,
+          "job_match": 4,
+          "job_knowledge": 8,
+          "creative_problem_solving": 8,
+          "team_player": 3.5,
+          "communication_skill": 7.5,
+          "exposure_to_job_profile": 7,
+          "status": "Accept",
+          "feedback_status": "Approved",
+          "add_date": {
+            "$date": "2024-12-19T11:50:24.966Z"
+          },
+          "stage": "1st Round",
+          "communication": 0,
+          "skills": 0,
+          "total": 38,
+          "interview_date": {
+            "$date": "2024-12-19T12:00:00.000Z"
+          },
+          "_id": {
+            "$oid": "67640880bf5574c659d19bde"
+          },
+          "updated_on": {
+            "$date": "2024-12-19T11:50:59.997Z"
+          },
+          "feedback_date": {
+            "$date": "2024-12-19T00:00:00.000Z"
+          },
+          "added_by": "Gaurav Pachouri",
+          "comment": "Okay"
+        },
+        {
+          "employee_name": "Awanish Awasthi (5124)",
+          "designation": "Associate National Lead - HR & Admin",
+          "employee_id": {
+            "$oid": "673edeabd2e1daae56bd88c1"
+          },
+          "rating": 0,
+          "job_match": 4,
+          "job_knowledge": 8,
+          "creative_problem_solving": 8,
+          "team_player": 3.5,
+          "communication_skill": 7.5,
+          "exposure_to_job_profile": 7,
+          "status": "Accept",
+          "feedback_status": "Approved",
+          "add_date": {
+            "$date": "2024-12-19T11:50:24.966Z"
+          },
+          "stage": "1st Round",
+          "communication": 0,
+          "skills": 0,
+          "total": 38,
+          "interview_date": {
+            "$date": "2024-12-19T12:00:00.000Z"
+          },
+          "_id": {
+            "$oid": "67640880bf5574c659d19bdf"
+          },
+          "updated_on": {
+            "$date": "2024-12-19T11:51:12.923Z"
+          },
+          "feedback_date": {
+            "$date": "2024-12-19T00:00:00.000Z"
+          },
+          "added_by": "Gaurav Pachouri",
+          "comment": "Okay"
+        }
+      ],
+      "interview_date": {
+        "$date": "2024-12-19T12:00:00.000Z"
+      },
+      "onboard_date": {
+        "$date": "2024-12-17T11:37:24.843Z"
+      },
+      "batch_id": "",
+      "interview_duration": "15 min",
+      "stage": "1st Round",
+      "final_job_offer_approval": [
+        {
+          "employee_id": "673edeabd2e1daae56bd88c4",
+          "employee_code": "5258",
+          "designation": "Project Director",
+          "name": "Sangita Pandey",
+          "email": "psangita@hlfppt.org",
+          "status": "",
+          "priority": 1,
+          "add_date": {
+            "$date": "2024-12-19T11:40:33.684Z"
+          },
+          "_id": {
+            "$oid": "676406314091e50b31672836"
+          }
+        },
+        {
+          "employee_id": "673edeabd2e1daae56bd88d6",
+          "employee_code": "7660",
+          "designation": "Project Lead- TB",
+          "name": "Chaturanand  Thakur",
+          "email": "cthakur@hlfppt.org",
+          "status": "",
+          "priority": 2,
+          "add_date": {
+            "$date": "2024-12-19T11:40:33.684Z"
+          },
+          "_id": {
+            "$oid": "676406314091e50b31672837"
+          }
+        },
+        {
+          "employee_id": "NA",
+          "employee_code": "CEO",
+          "designation": "CEO",
+          "name": "CEO Sir",
+          "email": "CEO",
+          "status": "",
+          "priority": 3,
+          "add_date": {
+            "$date": "2024-12-19T11:40:33.684Z"
+          },
+          "_id": {
+            "$oid": "676406314091e50b31672838"
+          }
+        }
+      ],
+      "final_job_offer_approval_status": "No"
+    }
+  ],
+  "assessment_apply_status": "enable",
+  "assessment_status": "Pending",
+  "assessment_result": "",
+  "score": 0,
+  "complete_profile_status": 40,
+  "profile_avg_rating": 37.5,
+  "page_steps": [
+    {
+      "step": 1,
+      "page": "MCQ",
+      "status": "pending",
+      "_id": {
+        "$oid": "676162740a19a0d2909f3600"
+      }
+    },
+    {
+      "step": 1,
+      "page": "MCQ",
+      "status": "pending",
+      "_id": {
+        "$oid": "676162d30a19a0d2909f367d"
+      }
+    },
+    {
+      "step": 1,
+      "page": "MCQ",
+      "status": "pending",
+      "_id": {
+        "$oid": "676407ff3a33fd95b6d6356a"
+      }
+    }
+  ],
+  "reject_doc_reason": "",
+  "mcq_final_score": 0,
+  "mcq_score_final_result": "",
+  "mcq_attempts": "Available",
+  "comprehensive_final_score": 0,
+  "comprehensive_score_final_result": "",
+  "comprehensive_attempts": "Available",
+  "otp_sent_on": {
+    "$date": "2024-12-17T11:37:24.843Z"
+  },
+  "experience": [],
+  "education": [],
+  "social_links": [],
+  "docs": [],
+  "assessment_result_data": [],
+  "__v": 0,
+  "batch_id": ""
+},
+{
+  "_id": {
+    "$oid": "676162740a19a0d2909f3602"
+  },
+  "job_id": {
+    "$oid": "67615ee00a19a0d2909f33f1"
+  },
+  "job_title": "Finance Officer",
+  "job_type": "OnRole",
+  "project_id": {
+    "$oid": "6756c77d03614a9006479bfb"
+  },
+  "project_name": "GFATM HIV/AIDS & TB",
+  "department": "",
+  "name": "Aman Bajaj",
+  "email": "amanbajaj1023@gmail.com",
+  "mobile_no": "8585919825",
+  "designation": "Finance Officer",
+  "total_experience": "10 Year(s)",
+  "relevant_experience": "10 Year(s)",
+  "location": "New Delhi",
+  "current_ctc": "Rs 12.50 Lakhs",
+  "expected_ctc": "Negotiable",
+  "notice_period": "1",
+  "current_employer": "Acuity Knowledge Partners ( Formerly known",
+  "current_employer_mobile": "",
+  "last_working_day": {
+    "$date": "2024-12-17T11:37:24.818Z"
+  },
+  "applied_from": "Naukri",
+  "reference_employee": "",
+  "form_status": "Rejected",
+  "profile_status": "Active",
+  "kyc_steps": "Profile",
+  "add_date": {
+    "$date": "2024-12-17T11:37:24.818Z"
+  },
+  "updated_on": {
+    "$date": "2024-12-19T11:45:34.892Z"
+  },
+  "applied_jobs": [
+    {
+      "job_id": {
+        "$oid": "67615ee00a19a0d2909f33f1"
+      },
+      "job_title": "Finance Officer",
+      "job_type": "OnRole",
+      "job_location": "Noida , Uttar Pradesh",
+      "job_designation": "Finance Officer",
+      "job_designation_id": {
+        "$oid": "673041a393c167ffc0c61290"
+      },
+      "offer_ctc": 0,
+      "original_ctc": 960000,
+      "project_id": {
+        "$oid": "6756c77d03614a9006479bfb"
+      },
+      "project_name": "GFATM HIV/AIDS & TB",
+      "department": "Finance",
+      "recommendation": "",
+      "interview_status": "Pending",
+      "form_status": "Rejected",
+      "add_date": {
+        "$date": "2024-12-17T11:37:24.818Z"
+      },
+      "interview_type": "Online",
+      "google_meet_link": "https://meet.google.com/ewy-udun-qnv",
+      "venue_location": "",
+      "interview_host": "Panel",
+      "mark_as_hired": "No",
+      "offer_status": "",
+      "both_address_same": "No",
+      "_id": {
+        "$oid": "676162740a19a0d2909f3603"
+      },
+      "interviewer": [
+        {
+          "employee_name": "Ajay Kumar Sharma (6587)",
+          "designation": "Senior Manager - HR",
+          "employee_id": {
+            "$oid": "673edeabd2e1daae56bd88c8"
+          },
+          "rating": 0,
+          "job_match": 4,
+          "job_knowledge": 7,
+          "creative_problem_solving": 2.5,
+          "team_player": 3,
+          "communication_skill": 4,
+          "exposure_to_job_profile": 5,
+          "status": "Accept",
+          "feedback_status": "Approved",
+          "add_date": {
+            "$date": "2024-12-19T11:44:18.019Z"
+          },
+          "stage": "1st Round",
+          "communication": 0,
+          "skills": 0,
+          "total": 25.5,
+          "interview_date": {
+            "$date": "2024-12-19T12:00:00.000Z"
+          },
+          "_id": {
+            "$oid": "676407123a33fd95b6d63324"
+          },
+          "updated_on": {
+            "$date": "2024-12-19T11:44:50.523Z"
+          },
+          "feedback_date": {
+            "$date": "2024-12-19T00:00:00.000Z"
+          },
+          "added_by": "Gaurav Pachouri",
+          "comment": "Ok"
+        },
+        {
+          "employee_name": "Ajay Kumar Jha (6851)",
+          "designation": "Associate National Lead - Finance & Accounts",
+          "employee_id": {
+            "$oid": "673edeabd2e1daae56bd88c9"
+          },
+          "rating": 0,
+          "job_match": 4,
+          "job_knowledge": 6,
+          "creative_problem_solving": 3,
+          "team_player": 3,
+          "communication_skill": 5,
+          "exposure_to_job_profile": 3.5,
+          "status": "Accept",
+          "feedback_status": "Approved",
+          "add_date": {
+            "$date": "2024-12-19T11:44:18.019Z"
+          },
+          "stage": "1st Round",
+          "communication": 0,
+          "skills": 0,
+          "total": 24.5,
+          "interview_date": {
+            "$date": "2024-12-19T12:00:00.000Z"
+          },
+          "_id": {
+            "$oid": "676407123a33fd95b6d63325"
+          },
+          "updated_on": {
+            "$date": "2024-12-19T11:45:17.934Z"
+          },
+          "feedback_date": {
+            "$date": "2024-12-19T00:00:00.000Z"
+          },
+          "added_by": "Gaurav Pachouri",
+          "comment": "Not Okay"
+        },
+        {
+          "employee_name": "Awanish Awasthi (5124)",
+          "designation": "Associate National Lead - HR & Admin",
+          "employee_id": {
+            "$oid": "673edeabd2e1daae56bd88c1"
+          },
+          "rating": 0,
+          "job_match": 4,
+          "job_knowledge": 6,
+          "creative_problem_solving": 3,
+          "team_player": 3,
+          "communication_skill": 5,
+          "exposure_to_job_profile": 3.5,
+          "status": "Accept",
+          "feedback_status": "Approved",
+          "add_date": {
+            "$date": "2024-12-19T11:44:18.019Z"
+          },
+          "stage": "1st Round",
+          "communication": 0,
+          "skills": 0,
+          "total": 24.5,
+          "interview_date": {
+            "$date": "2024-12-19T12:00:00.000Z"
+          },
+          "_id": {
+            "$oid": "676407123a33fd95b6d63326"
+          },
+          "updated_on": {
+            "$date": "2024-12-19T11:45:34.892Z"
+          },
+          "feedback_date": {
+            "$date": "2024-12-19T00:00:00.000Z"
+          },
+          "added_by": "Gaurav Pachouri",
+          "comment": "Not Okay"
+        }
+      ],
+      "interview_date": {
+        "$date": "2024-12-19T12:00:00.000Z"
+      },
+      "onboard_date": {
+        "$date": "2024-12-17T11:37:24.847Z"
+      },
+      "batch_id": "122024",
+      "final_job_offer_approval": [
+        {
+          "employee_id": "673edeabd2e1daae56bd88c4",
+          "employee_code": "5258",
+          "designation": "Project Director",
+          "name": "Sangita Pandey",
+          "email": "psangita@hlfppt.org",
+          "status": "",
+          "priority": 1,
+          "add_date": {
+            "$date": "2024-12-19T06:18:23.697Z"
+          },
+          "_id": {
+            "$oid": "6763baaf23012aa9f76accd3"
+          }
+        },
+        {
+          "employee_id": "673edeabd2e1daae56bd88d6",
+          "employee_code": "7660",
+          "designation": "Project Lead- TB",
+          "name": "Chaturanand  Thakur",
+          "email": "cthakur@hlfppt.org",
+          "status": "",
+          "priority": 2,
+          "add_date": {
+            "$date": "2024-12-19T06:18:23.697Z"
+          },
+          "_id": {
+            "$oid": "6763baaf23012aa9f76accd4"
+          }
+        },
+        {
+          "employee_id": "NA",
+          "employee_code": "CEO",
+          "designation": "CEO",
+          "name": "CEO Sir",
+          "email": "CEO",
+          "status": "",
+          "priority": 3,
+          "add_date": {
+            "$date": "2024-12-19T06:18:23.697Z"
+          },
+          "_id": {
+            "$oid": "6763baaf23012aa9f76accd5"
+          }
+        }
+      ],
+      "final_job_offer_approval_status": "No",
+      "interview_duration": "30 min",
+      "stage": "1st Round"
+    }
+  ],
+  "assessment_apply_status": "enable",
+  "assessment_status": "Pending",
+  "assessment_result": "",
+  "score": 0,
+  "complete_profile_status": 40,
+  "profile_avg_rating": 24.83,
+  "page_steps": [
+    {
+      "step": 1,
+      "page": "MCQ",
+      "status": "pending",
+      "_id": {
+        "$oid": "676162740a19a0d2909f3604"
+      }
+    },
+    {
+      "step": 1,
+      "page": "MCQ",
+      "status": "pending",
+      "_id": {
+        "$oid": "676162d30a19a0d2909f367b"
+      }
+    }
+  ],
+  "reject_doc_reason": "",
+  "mcq_final_score": 0,
+  "mcq_score_final_result": "",
+  "mcq_attempts": "Available",
+  "comprehensive_final_score": 0,
+  "comprehensive_score_final_result": "",
+  "comprehensive_attempts": "Available",
+  "otp_sent_on": {
+    "$date": "2024-12-17T11:37:24.848Z"
+  },
+  "experience": [],
+  "education": [],
+  "social_links": [],
+  "docs": [],
+  "assessment_result_data": [],
+  "__v": 0,
+  "batch_id": "122024"
+},
+{
+  "_id": {
+    "$oid": "676162740a19a0d2909f3606"
+  },
+  "job_id": {
+    "$oid": "67615ee00a19a0d2909f33f1"
+  },
+  "job_title": "Finance Officer",
+  "job_type": "OnRole",
+  "project_id": {
+    "$oid": "6756c77d03614a9006479bfb"
+  },
+  "project_name": "GFATM HIV/AIDS & TB",
+  "department": "",
+  "name": "Mohit Mittal",
+  "email": "coolmohitk@gmail.com",
+  "mobile_no": "9910744957",
+  "designation": "Finance Officer",
+  "total_experience": "7 Year(s)",
+  "relevant_experience": "7 Year(s)",
+  "location": "Ghaziabad",
+  "current_ctc": "Rs 4.80 Lakhs",
+  "expected_ctc": "Negotiable",
+  "notice_period": "NaN",
+  "current_employer": "Northern Steel Genral",
+  "current_employer_mobile": "",
+  "last_working_day": {
+    "$date": "2024-12-17T11:37:24.819Z"
+  },
+  "applied_from": "Naukri",
+  "reference_employee": "",
+  "form_status": "Interview",
+  "profile_status": "Active",
+  "kyc_steps": "Profile",
+  "add_date": {
+    "$date": "2024-12-17T11:37:24.819Z"
+  },
+  "updated_on": {
+    "$date": "2024-12-19T11:49:37.280Z"
+  },
+  "applied_jobs": [
+    {
+      "job_id": {
+        "$oid": "67615ee00a19a0d2909f33f1"
+      },
+      "job_title": "Finance Officer",
+      "job_type": "OnRole",
+      "job_location": "Noida , Uttar Pradesh",
+      "job_designation": "Finance Officer",
+      "job_designation_id": {
+        "$oid": "673041a393c167ffc0c61290"
+      },
+      "offer_ctc": 800000,
+      "original_ctc": 960000,
+      "project_id": {
+        "$oid": "6756c77d03614a9006479bfb"
+      },
+      "project_name": "GFATM HIV/AIDS & TB",
+      "department": "Finance",
+      "recommendation": "",
+      "interview_status": "Pending",
+      "form_status": "Interview",
+      "add_date": {
+        "$date": "2024-12-17T11:37:24.818Z"
+      },
+      "interview_type": "Online",
+      "google_meet_link": "https://meet.google.com/ewy-udun-qnv",
+      "venue_location": "",
+      "interview_host": "Panel",
+      "mark_as_hired": "No",
+      "offer_status": "",
+      "both_address_same": "No",
+      "_id": {
+        "$oid": "676162740a19a0d2909f3607"
+      },
+      "interviewer": [
+        {
+          "employee_name": "Ajay Kumar Sharma (6587)",
+          "designation": "Senior Manager - HR",
+          "employee_id": {
+            "$oid": "673edeabd2e1daae56bd88c8"
+          },
+          "rating": 0,
+          "job_match": 4,
+          "job_knowledge": 7.5,
+          "creative_problem_solving": 8,
+          "team_player": 3.5,
+          "communication_skill": 6,
+          "exposure_to_job_profile": 7.5,
+          "status": "Accept",
+          "feedback_status": "Approved",
+          "add_date": {
+            "$date": "2024-12-19T11:48:46.292Z"
+          },
+          "stage": "1st Round",
+          "communication": 0,
+          "skills": 0,
+          "total": 36.5,
+          "interview_date": {
+            "$date": "2024-12-19T12:00:00.000Z"
+          },
+          "_id": {
+            "$oid": "6764081ebf5574c659d19a32"
+          },
+          "updated_on": {
+            "$date": "2024-12-19T11:49:09.489Z"
+          },
+          "feedback_date": {
+            "$date": "2024-12-19T00:00:00.000Z"
+          },
+          "added_by": "Gaurav Pachouri",
+          "comment": "Okay"
+        },
+        {
+          "employee_name": "Ajay Kumar Jha (6851)",
+          "designation": "Associate National Lead - Finance & Accounts",
+          "employee_id": {
+            "$oid": "673edeabd2e1daae56bd88c9"
+          },
+          "rating": 0,
+          "job_match": 4,
+          "job_knowledge": 7.5,
+          "creative_problem_solving": 8,
+          "team_player": 3.5,
+          "communication_skill": 5,
+          "exposure_to_job_profile": 7.5,
+          "status": "Accept",
+          "feedback_status": "Approved",
+          "add_date": {
+            "$date": "2024-12-19T11:48:46.292Z"
+          },
+          "stage": "1st Round",
+          "communication": 0,
+          "skills": 0,
+          "total": 35.5,
+          "interview_date": {
+            "$date": "2024-12-19T12:00:00.000Z"
+          },
+          "_id": {
+            "$oid": "6764081ebf5574c659d19a33"
+          },
+          "updated_on": {
+            "$date": "2024-12-19T11:49:22.735Z"
+          },
+          "feedback_date": {
+            "$date": "2024-12-19T00:00:00.000Z"
+          },
+          "added_by": "Gaurav Pachouri",
+          "comment": "Okay"
+        },
+        {
+          "employee_name": "Awanish Awasthi (5124)",
+          "designation": "Associate National Lead - HR & Admin",
+          "employee_id": {
+            "$oid": "673edeabd2e1daae56bd88c1"
+          },
+          "rating": 0,
+          "job_match": 4,
+          "job_knowledge": 7.5,
+          "creative_problem_solving": 8,
+          "team_player": 3.5,
+          "communication_skill": 7,
+          "exposure_to_job_profile": 7.5,
+          "status": "Accept",
+          "feedback_status": "Approved",
+          "add_date": {
+            "$date": "2024-12-19T11:48:46.292Z"
+          },
+          "stage": "1st Round",
+          "communication": 0,
+          "skills": 0,
+          "total": 37.5,
+          "interview_date": {
+            "$date": "2024-12-19T12:00:00.000Z"
+          },
+          "_id": {
+            "$oid": "6764081ebf5574c659d19a34"
+          },
+          "updated_on": {
+            "$date": "2024-12-19T11:49:37.280Z"
+          },
+          "feedback_date": {
+            "$date": "2024-12-19T00:00:00.000Z"
+          },
+          "added_by": "Gaurav Pachouri",
+          "comment": "Okay"
+        }
+      ],
+      "interview_date": {
+        "$date": "2024-12-19T12:00:00.000Z"
+      },
+      "onboard_date": {
+        "$date": "2024-12-19T00:00:00.000Z"
+      },
+      "batch_id": "",
+      "interview_duration": "30 min",
+      "stage": "1st Round",
+      "final_job_offer_approval": [
+        {
+          "employee_id": "673edeabd2e1daae56bd88c4",
+          "employee_code": "5258",
+          "designation": "Project Director",
+          "name": "Sangita Pandey",
+          "email": "psangita@hlfppt.org",
+          "status": "",
+          "priority": 1,
+          "add_date": {
+            "$date": "2024-12-19T11:35:59.287Z"
+          },
+          "_id": {
+            "$oid": "6764051f4091e50b31672805"
+          }
+        },
+        {
+          "employee_id": "673edeabd2e1daae56bd88d6",
+          "employee_code": "7660",
+          "designation": "Project Lead- TB",
+          "name": "Chaturanand  Thakur",
+          "email": "cthakur@hlfppt.org",
+          "status": "",
+          "priority": 2,
+          "add_date": {
+            "$date": "2024-12-19T11:35:59.287Z"
+          },
+          "_id": {
+            "$oid": "6764051f4091e50b31672806"
+          }
+        },
+        {
+          "employee_id": "NA",
+          "employee_code": "CEO",
+          "designation": "CEO",
+          "name": "CEO Sir",
+          "email": "CEO",
+          "status": "",
+          "priority": 3,
+          "add_date": {
+            "$date": "2024-12-19T11:35:59.287Z"
+          },
+          "_id": {
+            "$oid": "6764051f4091e50b31672807"
+          }
+        }
+      ],
+      "final_job_offer_approval_status": "No",
+      "job_valid_till": {
+        "$date": "2025-06-21T00:00:00.000Z"
+      }
+    }
+  ],
+  "assessment_apply_status": "enable",
+  "assessment_status": "Pending",
+  "assessment_result": "",
+  "score": 0,
+  "complete_profile_status": 40,
+  "profile_avg_rating": 36.5,
+  "page_steps": [
+    {
+      "step": 1,
+      "page": "MCQ",
+      "status": "pending",
+      "_id": {
+        "$oid": "676162740a19a0d2909f3608"
+      }
+    },
+    {
+      "step": 1,
+      "page": "MCQ",
+      "status": "pending",
+      "_id": {
+        "$oid": "676162d30a19a0d2909f3679"
+      }
+    },
+    {
+      "step": 1,
+      "page": "MCQ",
+      "status": "pending",
+      "_id": {
+        "$oid": "676407fd3a33fd95b6d63539"
+      }
+    }
+  ],
+  "reject_doc_reason": "",
+  "mcq_final_score": 0,
+  "mcq_score_final_result": "",
+  "mcq_attempts": "Available",
+  "comprehensive_final_score": 0,
+  "comprehensive_score_final_result": "",
+  "comprehensive_attempts": "Available",
+  "otp_sent_on": {
+    "$date": "2024-12-17T11:37:24.853Z"
+  },
+  "experience": [],
+  "education": [],
+  "social_links": [],
+  "docs": [],
+  "assessment_result_data": [],
+  "__v": 0,
+  "batch_id": ""
+},
+{
+  "_id": {
+    "$oid": "676162740a19a0d2909f360a"
+  },
+  "job_id": {
+    "$oid": "67615ee00a19a0d2909f33f1"
+  },
+  "job_title": "Finance Officer",
+  "job_type": "OnRole",
+  "project_id": {
+    "$oid": "6756c77d03614a9006479bfb"
+  },
+  "project_name": "GFATM HIV/AIDS & TB",
+  "department": "",
+  "name": "Mukesh Kumar Saraswat",
+  "email": "mk13saraswat@gmail.com, mk13saraswat@rediffmail.com",
+  "mobile_no": "9871999563",
+  "designation": "Finance Officer",
+  "total_experience": "16 Year(s)",
+  "relevant_experience": "16 Year(s)",
+  "location": "New Delhi",
+  "current_ctc": "Rs 8.40 Lakhs",
+  "expected_ctc": "Negotiable",
+  "notice_period": "15",
+  "current_employer": "Manufacturing, Export-Import, Trading.",
+  "current_employer_mobile": "",
+  "last_working_day": {
+    "$date": "2024-12-17T11:37:24.819Z"
+  },
+  "applied_from": "Naukri",
+  "reference_employee": "",
+  "form_status": "Rejected",
+  "profile_status": "Active",
+  "kyc_steps": "Profile",
+  "add_date": {
+    "$date": "2024-12-17T11:37:24.819Z"
+  },
+  "updated_on": {
+    "$date": "2024-12-19T11:47:14.204Z"
+  },
+  "applied_jobs": [
+    {
+      "job_id": {
+        "$oid": "67615ee00a19a0d2909f33f1"
+      },
+      "job_title": "Finance Officer",
+      "job_type": "OnRole",
+      "job_location": "Noida , Uttar Pradesh",
+      "job_designation": "Finance Officer",
+      "job_designation_id": {
+        "$oid": "673041a393c167ffc0c61290"
+      },
+      "offer_ctc": 0,
+      "original_ctc": 960000,
+      "project_id": {
+        "$oid": "6756c77d03614a9006479bfb"
+      },
+      "project_name": "GFATM HIV/AIDS & TB",
+      "department": "Finance",
+      "recommendation": "",
+      "interview_status": "Pending",
+      "form_status": "Rejected",
+      "add_date": {
+        "$date": "2024-12-17T11:37:24.818Z"
+      },
+      "interview_type": "Online",
+      "google_meet_link": "https://meet.google.com/ewy-udun-qnv",
+      "venue_location": "",
+      "interview_host": "Panel",
+      "mark_as_hired": "No",
+      "offer_status": "",
+      "both_address_same": "No",
+      "_id": {
+        "$oid": "676162740a19a0d2909f360b"
+      },
+      "interviewer": [
+        {
+          "employee_name": "Ajay Kumar Sharma (6587)",
+          "designation": "Senior Manager - HR",
+          "employee_id": {
+            "$oid": "673edeabd2e1daae56bd88c8"
+          },
+          "rating": 0,
+          "job_match": 3,
+          "job_knowledge": 5.5,
+          "creative_problem_solving": 5.5,
+          "team_player": 4,
+          "communication_skill": 7,
+          "exposure_to_job_profile": 7,
+          "status": "Accept",
+          "feedback_status": "Approved",
+          "add_date": {
+            "$date": "2024-12-19T11:43:15.433Z"
+          },
+          "stage": "1st Round",
+          "communication": 0,
+          "skills": 0,
+          "total": 32,
+          "interview_date": {
+            "$date": "2024-12-19T12:00:00.000Z"
+          },
+          "_id": {
+            "$oid": "676406d33a33fd95b6d63297"
+          },
+          "updated_on": {
+            "$date": "2024-12-19T11:46:46.829Z"
+          },
+          "feedback_date": {
+            "$date": "2024-12-19T00:00:00.000Z"
+          },
+          "added_by": "Gaurav Pachouri",
+          "comment": "Not Okay"
+        },
+        {
+          "employee_name": "Ajay Kumar Jha (6851)",
+          "designation": "Associate National Lead - Finance & Accounts",
+          "employee_id": {
+            "$oid": "673edeabd2e1daae56bd88c9"
+          },
+          "rating": 0,
+          "job_match": 3,
+          "job_knowledge": 5.5,
+          "creative_problem_solving": 5.5,
+          "team_player": 4,
+          "communication_skill": 4,
+          "exposure_to_job_profile": 7,
+          "status": "Accept",
+          "feedback_status": "Approved",
+          "add_date": {
+            "$date": "2024-12-19T11:43:15.433Z"
+          },
+          "stage": "1st Round",
+          "communication": 0,
+          "skills": 0,
+          "total": 29,
+          "interview_date": {
+            "$date": "2024-12-19T12:00:00.000Z"
+          },
+          "_id": {
+            "$oid": "676406d33a33fd95b6d63298"
+          },
+          "updated_on": {
+            "$date": "2024-12-19T11:47:01.113Z"
+          },
+          "feedback_date": {
+            "$date": "2024-12-19T00:00:00.000Z"
+          },
+          "added_by": "Gaurav Pachouri",
+          "comment": "Not Okay"
+        },
+        {
+          "employee_name": "Awanish Awasthi (5124)",
+          "designation": "Associate National Lead - HR & Admin",
+          "employee_id": {
+            "$oid": "673edeabd2e1daae56bd88c1"
+          },
+          "rating": 0,
+          "job_match": 3,
+          "job_knowledge": 5.5,
+          "creative_problem_solving": 5.5,
+          "team_player": 4,
+          "communication_skill": 3.5,
+          "exposure_to_job_profile": 7,
+          "status": "Accept",
+          "feedback_status": "Approved",
+          "add_date": {
+            "$date": "2024-12-19T11:43:15.433Z"
+          },
+          "stage": "1st Round",
+          "communication": 0,
+          "skills": 0,
+          "total": 28.5,
+          "interview_date": {
+            "$date": "2024-12-19T12:00:00.000Z"
+          },
+          "_id": {
+            "$oid": "676406d33a33fd95b6d63299"
+          },
+          "updated_on": {
+            "$date": "2024-12-19T11:47:14.204Z"
+          },
+          "feedback_date": {
+            "$date": "2024-12-19T00:00:00.000Z"
+          },
+          "added_by": "Gaurav Pachouri",
+          "comment": "Not Okay"
+        }
+      ],
+      "interview_date": {
+        "$date": "2024-12-19T12:00:00.000Z"
+      },
+      "onboard_date": {
+        "$date": "2024-12-17T11:37:24.858Z"
+      },
+      "batch_id": "122024",
+      "final_job_offer_approval": [
+        {
+          "employee_id": "673edeabd2e1daae56bd88c4",
+          "employee_code": "5258",
+          "designation": "Project Director",
+          "name": "Sangita Pandey",
+          "email": "psangita@hlfppt.org",
+          "status": "",
+          "priority": 1,
+          "add_date": {
+            "$date": "2024-12-18T09:53:23.708Z"
+          },
+          "_id": {
+            "$oid": "67629b93145846e9451df36f"
+          }
+        },
+        {
+          "employee_id": "673edeabd2e1daae56bd88d6",
+          "employee_code": "7660",
+          "designation": "Project Lead- TB",
+          "name": "Chaturanand  Thakur",
+          "email": "cthakur@hlfppt.org",
+          "status": "",
+          "priority": 2,
+          "add_date": {
+            "$date": "2024-12-18T09:53:23.708Z"
+          },
+          "_id": {
+            "$oid": "67629b93145846e9451df370"
+          }
+        },
+        {
+          "employee_id": "NA",
+          "employee_code": "CEO",
+          "designation": "CEO",
+          "name": "CEO Sir",
+          "email": "CEO",
+          "status": "",
+          "priority": 3,
+          "add_date": {
+            "$date": "2024-12-18T09:53:23.708Z"
+          },
+          "_id": {
+            "$oid": "67629b93145846e9451df371"
+          }
+        }
+      ],
+      "final_job_offer_approval_status": "No",
+      "interview_duration": "30 min",
+      "stage": "1st Round"
+    }
+  ],
+  "assessment_apply_status": "enable",
+  "assessment_status": "Pending",
+  "assessment_result": "",
+  "score": 0,
+  "complete_profile_status": 40,
+  "profile_avg_rating": 29.83,
+  "page_steps": [
+    {
+      "step": 1,
+      "page": "MCQ",
+      "status": "pending",
+      "_id": {
+        "$oid": "676162740a19a0d2909f360c"
+      }
+    },
+    {
+      "step": 1,
+      "page": "MCQ",
+      "status": "pending",
+      "_id": {
+        "$oid": "676162d30a19a0d2909f3677"
+      }
+    }
+  ],
+  "reject_doc_reason": "",
+  "mcq_final_score": 0,
+  "mcq_score_final_result": "",
+  "mcq_attempts": "Available",
+  "comprehensive_final_score": 0,
+  "comprehensive_score_final_result": "",
+  "comprehensive_attempts": "Available",
+  "otp_sent_on": {
+    "$date": "2024-12-17T11:37:24.858Z"
+  },
+  "experience": [],
+  "education": [],
+  "social_links": [],
+  "docs": [],
+  "assessment_result_data": [],
+  "__v": 0,
+  "batch_id": "122024"
+},
+{
+  "_id": {
+    "$oid": "6762a43f5aa2482057390e07"
+  },
+  "job_id": {
+    "$oid": "67615ee00a19a0d2909f33f1"
+  },
+  "job_title": "Finance Officer",
+  "job_type": "OnRole",
+  "project_id": {
+    "$oid": "6756c77d03614a9006479bfb"
+  },
+  "project_name": "GFATM HIV/AIDS & TB",
+  "department": "",
+  "name": "Krishna Kumar Meena",
+  "email": "meena.krishnakumar280@gmail.com",
+  "mobile_no": "9650909615",
+  "designation": "Finance Officer",
+  "total_experience": "7 Year(s)",
+  "relevant_experience": "7 Year(s)",
+  "location": "Noida",
+  "current_ctc": "7.0",
+  "expected_ctc": "8.0",
+  "notice_period": "30",
+  "current_employer": "Adroit",
+  "current_employer_mobile": "9650909615",
+  "last_working_day": {
+    "$date": "2024-11-30T00:00:00.000Z"
+  },
+  "applied_from": "Naukri",
+  "reference_employee": "",
+  "form_status": "Offer",
+  "profile_status": "Active",
+  "kyc_steps": "Profile",
+  "add_date": {
+    "$date": "2024-12-18T10:30:23.469Z"
+  },
+  "updated_on": {
+    "$date": "2024-12-18T10:34:26.264Z"
+  },
+  "applied_jobs": [
+    {
+      "job_id": {
+        "$oid": "67615ee00a19a0d2909f33f1"
+      },
+      "job_title": "Finance Officer",
+      "job_type": "OnRole",
+      "job_location": "Noida , Uttar Pradesh",
+      "job_designation": "Finance Officer",
+      "job_designation_id": {
+        "$oid": "673041a393c167ffc0c61290"
+      },
+      "offer_ctc": 800000,
+      "original_ctc": 960000,
+      "project_id": {
+        "$oid": "6756c77d03614a9006479bfb"
+      },
+      "project_name": "GFATM HIV/AIDS & TB",
+      "department": "Finance",
+      "recommendation": "",
+      "interview_status": "Pending",
+      "form_status": "Offer",
+      "add_date": {
+        "$date": "2024-12-18T10:30:23.469Z"
+      },
+      "interview_type": "Online",
+      "google_meet_link": "https://meet.google.com/kja-ceya-yez",
+      "venue_location": "",
+      "interview_host": "One-To-One",
+      "mark_as_hired": "No",
+      "offer_status": "Pending",
+      "both_address_same": "No",
+      "final_job_offer_approval_status": "No",
+      "_id": {
+        "$oid": "6762a43f5aa2482057390e08"
+      },
+      "interviewer": [
+        {
+          "employee_name": "Ajay Kumar Sharma (6587)",
+          "designation": "Senior Manager - HR",
+          "employee_id": {
+            "$oid": "673edeabd2e1daae56bd88c8"
+          },
+          "rating": 5,
+          "status": "Accept",
+          "feedback_status": "Approved",
+          "add_date": {
+            "$date": "2024-12-18T10:33:32.489Z"
+          },
+          "stage": "1st Round",
+          "communication": 10,
+          "skills": 9.5,
+          "total": 0,
+          "interview_date": {
+            "$date": "2024-12-18T11:00:00.000Z"
+          },
+          "_id": {
+            "$oid": "6762a4fc5aa2482057390e8f"
+          },
+          "updated_on": {
+            "$date": "2024-12-18T10:34:26.264Z"
+          },
+          "feedback_date": {
+            "$date": "2024-12-18T00:00:00.000Z"
+          },
+          "added_by": "Deepak  Singh",
+          "comment": "Very good candidate"
+        }
+      ],
+      "interview_date": {
+        "$date": "2024-12-18T11:00:00.000Z"
+      },
+      "onboard_date": {
+        "$date": "2024-12-18T00:00:00.000Z"
+      },
+      "final_job_offer_approval": [
+        {
+          "employee_id": "673edeabd2e1daae56bd88c8",
+          "employee_code": "6587",
+          "designation": "Senior Manager - HR",
+          "name": "Ajay Kumar Sharma",
+          "email": "ajaysharma@hlfppt.org",
+          "status": "Pending",
+          "priority": 2,
+          "add_date": {
+            "$date": "2024-12-18T10:33:33.410Z"
+          },
+          "_id": {
+            "$oid": "6762c7265aa2482057391039"
+          },
+          "send_mail_date": {
+            "$date": "2024-12-18T12:59:30.845Z"
+          }
+        },
+        {
+          "employee_id": "673edeabd2e1daae56bd88d6",
+          "employee_code": "7660",
+          "designation": "Project Lead- TB",
+          "name": "Chaturanand  Thakur",
+          "email": "cthakur@hlfppt.org",
+          "status": "",
+          "priority": 3,
+          "add_date": {
+            "$date": "2024-12-18T10:33:33.410Z"
+          },
+          "_id": {
+            "$oid": "6762c7265aa248205739103a"
+          }
+        },
+        {
+          "employee_id": "673edeabd2e1daae56bd88c5",
+          "employee_code": "5341",
+          "designation": "Manager - HR",
+          "name": "Saumya Kaushik",
+          "email": "skaushik@hlfppt.org",
+          "status": "Pending",
+          "priority": 1,
+          "add_date": {
+            "$date": "2024-12-18T12:57:53.727Z"
+          },
+          "send_mail_date": {
+            "$date": "2024-12-18T12:58:02.065Z"
+          },
+          "_id": {
+            "$oid": "6762c7265aa248205739103b"
+          }
+        },
+        {
+          "employee_id": "673edeabd2e1daae56bd88c8",
+          "employee_code": "6587",
+          "designation": "Senior Manager - HR",
+          "name": "Ajay Kumar Sharma",
+          "email": "ajaysharma@hlfppt.org",
+          "status": "",
+          "priority": 1,
+          "add_date": {
+            "$date": "2024-12-18T10:33:33.410Z"
+          },
+          "_id": {
+            "$oid": "6762c7265aa248205739103c"
+          }
+        },
+        {
+          "employee_id": "NA",
+          "employee_code": "CEO",
+          "designation": "CEO",
+          "name": "CEO Sir",
+          "email": "CEO",
+          "status": "",
+          "priority": 7,
+          "add_date": {
+            "$date": "2024-12-18T12:59:18.291Z"
+          },
+          "_id": {
+            "$oid": "6762c7265aa248205739103d"
+          }
+        }
+      ],
+      "batch_id": "",
+      "interview_duration": "15 min",
+      "stage": "1st Round"
+    }
+  ],
+  "assessment_apply_status": "enable",
+  "assessment_status": "Pending",
+  "assessment_result": "",
+  "score": 0,
+  "complete_profile_status": 40,
+  "profile_avg_rating": 0,
+  "page_steps": [
+    {
+      "step": 1,
+      "page": "MCQ",
+      "status": "pending",
+      "_id": {
+        "$oid": "6762a43f5aa2482057390e09"
+      }
+    },
+    {
+      "step": 1,
+      "page": "MCQ",
+      "status": "pending",
+      "_id": {
+        "$oid": "6762a47c5aa2482057390e3a"
+      }
+    }
+  ],
+  "reject_doc_reason": "",
+  "mcq_final_score": 0,
+  "mcq_score_final_result": "",
+  "mcq_attempts": "Available",
+  "comprehensive_final_score": 0,
+  "comprehensive_score_final_result": "",
+  "comprehensive_attempts": "Available",
+  "otp_sent_on": {
+    "$date": "2024-12-18T10:30:23.477Z"
+  },
+  "experience": [],
+  "education": [],
+  "social_links": [],
+  "docs": [],
+  "assessment_result_data": [],
+  "__v": 0,
+  "batch_id": "",
+  "verify_token": "Njc2MmE0M2Y1YWEyNDgyMDU3MzkwZTA3fDY3NjJhNDNmNWFhMjQ4MjA1NzM5MGUwOHxleUpoYkdjaU9pSklVekkxTmlJc0luUjVjQ0k2SWtwWFZDSjkuZXlKallXNWthV1JoZEdWZmFXUWlPaUkyTnpZeVlUUXpaalZoWVRJME9ESXdOVGN6T1RCbE1EY2lMQ0pxYjJKZmFXUWlPaUkyTnpZeVlUUXpaalZoWVRJME9ESXdOVGN6T1RCbE1EZ2lMQ0pwWVhRaU9qRTNNelExTWpjek5UUXNJbVY0Y0NJNk1UY3pORFUwTVRjMU5IMC5Yblh6OFR3T2N1VndPV2pETHFWd3pfYnZkdVUxZGtRUDhFRFFVbWJsamdr"
+},
+{
+  "_id": {
+    "$oid": "6765235aa5b496a020541316"
+  },
+  "job_id": {
+    "$oid": "675a9fc720a11af17988ff29"
+  },
+  "job_title": "Medical Officer-MBBS",
+  "job_type": "OnContract",
+  "project_id": {
+    "$oid": "675a9b38265b44e4003dcb5c"
+  },
+  "project_name": "ITC",
+  "department": "CSR",
+  "name": "Ashish",
+  "email": "dr.ashishkumar.india@gmail.com",
+  "mobile_no": "9179750900",
+  "total_experience": "0 Year(s) 0 Months",
+  "relevant_experience": "0 Year(s) 0 Months",
+  "location": "Rayagada",
+  "current_ctc": "0",
+  "expected_ctc": "0",
+  "notice_period": "0",
+  "resume_file": "1734681434459_97983959_41846645.pdf",
+  "social_links": [],
+  "form_status": "Applied",
+  "profile_status": "Active",
+  "kyc_steps": "Profile",
+  "add_date": {
+    "$date": "2024-12-20T07:57:14.464Z"
+  },
+  "updated_on": {
+    "$date": "2024-12-20T07:57:14.464Z"
+  },
+  "applied_jobs": [
+    {
+      "job_id": {
+        "$oid": "675a9fc720a11af17988ff29"
+      },
+      "job_title": "Medical Officer-MBBS",
+      "job_type": "OnContract",
+      "job_location": "Rayagada",
+      "job_designation": "Consultant - MO",
+      "job_designation_id": {
+        "$oid": "6730493093c167ffc0c6144f"
+      },
+      "offer_ctc": 0,
+      "original_ctc": 0,
+      "project_id": {
+        "$oid": "675a9b38265b44e4003dcb5c"
+      },
+      "project_name": "ITC",
+      "department": "CSR",
+      "recommendation": "",
+      "interview_status": "Pending",
+      "form_status": "Applied",
+      "add_date": {
+        "$date": "2024-12-20T07:57:14.464Z"
+      },
+      "interview_type": "Online",
+      "google_meet_link": "",
+      "venue_location": "",
+      "interview_host": "One-To-One",
+      "profile_details": {
+        "resume_file": "1734681434459_97983959_41846645.pdf",
+        "total_experience": "0 Year(s) 0 Months",
+        "relevant_experience": "0 Year(s) 0 Months",
+        "location": "Rayagada",
+        "notice_period": "0"
+      },
+      "mark_as_hired": "No",
+      "offer_status": "",
+      "both_address_same": "No",
+      "final_job_offer_approval_status": "No",
+      "mpr_job_offer_type": "",
+      "_id": {
+        "$oid": "6765235aa5b496a020541317"
+      },
+      "interviewer": [],
+      "interview_date": {
+        "$date": "2024-12-20T07:57:14.471Z"
+      },
+      "onboard_date": {
+        "$date": "2024-12-20T07:57:14.471Z"
+      },
+      "final_job_offer_approval": [
+        {
+          "employee_id": "673edeabd2e1daae56bd88bd",
+          "employee_code": "1152",
+          "designation": "National Lead - CSR",
+          "name": "Preeti Dwivedi",
+          "email": "pdwivedi@hlfppt.org",
+          "status": "",
+          "priority": 1,
+          "add_date": {
+            "$date": "2024-12-23T06:31:23.432Z"
+          },
+          "_id": {
+            "$oid": "676903bb0dbab9f8d3e795b5"
+          }
+        },
+        {
+          "employee_id": "673edeabd2e1daae56bd88c7",
+          "employee_code": "5490",
+          "designation": "Manager -CSR",
+          "name": "Chahat Gandotra",
+          "email": "cgandotra@hlfppt.org",
+          "status": "",
+          "priority": 2,
+          "add_date": {
+            "$date": "2024-12-23T06:31:23.432Z"
+          },
+          "_id": {
+            "$oid": "676903bb0dbab9f8d3e795b6"
+          }
+        },
+        {
+          "employee_id": "NA",
+          "employee_code": "CEO",
+          "designation": "CEO",
+          "name": "CEO Sir",
+          "email": "CEO",
+          "status": "",
+          "priority": 3,
+          "add_date": {
+            "$date": "2024-12-23T06:31:23.432Z"
+          },
+          "_id": {
+            "$oid": "676903bb0dbab9f8d3e795b7"
+          }
+        }
+      ]
+    }
+  ],
+  "assessment_apply_status": "disable",
+  "assessment_status": "Pending",
+  "assessment_result": "",
+  "score": 0,
+  "complete_profile_status": 40,
+  "profile_avg_rating": 0,
+  "page_steps": [
+    {
+      "step": 1,
+      "page": "MCQ",
+      "status": "pending",
+      "_id": {
+        "$oid": "6765235aa5b496a020541318"
+      }
+    }
+  ],
+  "reject_doc_reason": "",
+  "mcq_final_score": 0,
+  "mcq_score_final_result": "",
+  "mcq_attempts": "Available",
+  "comprehensive_final_score": 0,
+  "comprehensive_score_final_result": "",
+  "comprehensive_attempts": "Available",
+  "otp_sent_on": {
+    "$date": "2024-12-20T07:57:14.473Z"
+  },
+  "last_working_day": {
+    "$date": "2024-12-20T07:57:14.473Z"
+  },
+  "experience": [],
+  "education": [],
+  "docs": [],
+  "assessment_result_data": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67653baea5b496a020541387"
+  },
+  "job_id": {
+    "$oid": "675a9fc720a11af17988ff29"
+  },
+  "job_title": "Medical Officer-MBBS",
+  "job_type": "OnContract",
+  "project_id": {
+    "$oid": "675a9b38265b44e4003dcb5c"
+  },
+  "project_name": "ITC",
+  "department": "CSR",
+  "name": "Mohammad Abid",
+  "email": "mohammadabidabc@gmail.com",
+  "mobile_no": "7896069022",
+  "total_experience": "0 Year(s) 0 Months",
+  "relevant_experience": "0 Year(s) 0 Months",
+  "location": "Kolkata",
+  "current_ctc": "0",
+  "expected_ctc": "0",
+  "notice_period": "0",
+  "resume_file": "1734687662007_46627178_18608043.pdf",
+  "social_links": [],
+  "form_status": "Applied",
+  "profile_status": "Active",
+  "kyc_steps": "Profile",
+  "add_date": {
+    "$date": "2024-12-20T09:41:02.153Z"
+  },
+  "updated_on": {
+    "$date": "2024-12-20T09:41:02.153Z"
+  },
+  "applied_jobs": [
+    {
+      "job_id": {
+        "$oid": "675a9fc720a11af17988ff29"
+      },
+      "job_title": "Medical Officer-MBBS",
+      "job_type": "OnContract",
+      "job_location": "Kolkata",
+      "job_designation": "Consultant - MO",
+      "job_designation_id": {
+        "$oid": "6730493093c167ffc0c6144f"
+      },
+      "offer_ctc": 0,
+      "original_ctc": 0,
+      "project_id": {
+        "$oid": "675a9b38265b44e4003dcb5c"
+      },
+      "project_name": "ITC",
+      "department": "CSR",
+      "recommendation": "",
+      "interview_status": "Pending",
+      "form_status": "Applied",
+      "add_date": {
+        "$date": "2024-12-20T09:41:02.153Z"
+      },
+      "interview_type": "Online",
+      "google_meet_link": "",
+      "venue_location": "",
+      "interview_host": "One-To-One",
+      "profile_details": {
+        "resume_file": "1734687662007_46627178_18608043.pdf",
+        "total_experience": "0 Year(s) 0 Months",
+        "relevant_experience": "0 Year(s) 0 Months",
+        "location": "Kolkata",
+        "notice_period": "0"
+      },
+      "mark_as_hired": "No",
+      "offer_status": "",
+      "both_address_same": "No",
+      "final_job_offer_approval_status": "No",
+      "mpr_job_offer_type": "",
+      "_id": {
+        "$oid": "67653baea5b496a020541388"
+      },
+      "interviewer": [],
+      "interview_date": {
+        "$date": "2024-12-20T09:41:02.157Z"
+      },
+      "onboard_date": {
+        "$date": "2024-12-20T09:41:02.157Z"
+      },
+      "final_job_offer_approval": [
+        {
+          "employee_id": "673edeabd2e1daae56bd88bd",
+          "employee_code": "1152",
+          "designation": "National Lead - CSR",
+          "name": "Preeti Dwivedi",
+          "email": "pdwivedi@hlfppt.org",
+          "status": "",
+          "priority": 1,
+          "add_date": {
+            "$date": "2024-12-23T06:00:56.183Z"
+          },
+          "_id": {
+            "$oid": "6768fc9836c154b910869ced"
+          }
+        },
+        {
+          "employee_id": "673edeabd2e1daae56bd88c7",
+          "employee_code": "5490",
+          "designation": "Manager -CSR",
+          "name": "Chahat Gandotra",
+          "email": "cgandotra@hlfppt.org",
+          "status": "",
+          "priority": 2,
+          "add_date": {
+            "$date": "2024-12-23T06:00:56.183Z"
+          },
+          "_id": {
+            "$oid": "6768fc9836c154b910869cee"
+          }
+        },
+        {
+          "employee_id": "NA",
+          "employee_code": "CEO",
+          "designation": "CEO",
+          "name": "CEO Sir",
+          "email": "CEO",
+          "status": "",
+          "priority": 3,
+          "add_date": {
+            "$date": "2024-12-23T06:00:56.183Z"
+          },
+          "_id": {
+            "$oid": "6768fc9836c154b910869cef"
+          }
+        }
+      ]
+    }
+  ],
+  "assessment_apply_status": "disable",
+  "assessment_status": "Pending",
+  "assessment_result": "",
+  "score": 0,
+  "complete_profile_status": 40,
+  "profile_avg_rating": 0,
+  "page_steps": [
+    {
+      "step": 1,
+      "page": "MCQ",
+      "status": "pending",
+      "_id": {
+        "$oid": "67653baea5b496a020541389"
+      }
+    }
+  ],
+  "reject_doc_reason": "",
+  "mcq_final_score": 0,
+  "mcq_score_final_result": "",
+  "mcq_attempts": "Available",
+  "comprehensive_final_score": 0,
+  "comprehensive_score_final_result": "",
+  "comprehensive_attempts": "Available",
+  "otp_sent_on": {
+    "$date": "2024-12-20T09:41:02.158Z"
+  },
+  "last_working_day": {
+    "$date": "2024-12-20T09:41:02.158Z"
+  },
+  "experience": [],
+  "education": [],
+  "docs": [],
+  "assessment_result_data": [],
+  "__v": 0
+}]

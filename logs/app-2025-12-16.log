@@ -1,0 +1,76 @@
+[2025-12-16T06:23:21.439Z] [INFO] Server is listening on http://localhost:8080
+[2025-12-16T06:56:36.507Z] [INFO] Server is listening on http://localhost:8080
+[2025-12-16T06:57:45.424Z] [INFO] Server is listening on http://localhost:8080
+[2025-12-16T06:57:54.169Z] [INFO] Server is listening on http://localhost:8080
+[2025-12-16T06:58:15.928Z] [INFO] Server is listening on http://localhost:8080
+[2025-12-16T06:58:37.312Z] [INFO] Server is listening on http://localhost:8080
+[2025-12-16T07:11:50.398Z] [INFO] Server is listening on http://localhost:8080
+[2025-12-16T07:15:32.107Z] [INFO] Server is listening on http://localhost:8080
+[2025-12-16T07:20:39.026Z] [INFO] Server is listening on http://localhost:8080
+[2025-12-16T07:21:12.058Z] [INFO] Server is listening on http://localhost:8080
+[2025-12-16T07:27:04.452Z] [INFO] Server is listening on http://localhost:8080
+[2025-12-16T07:28:08.934Z] [INFO] Server is listening on http://localhost:8080
+[2025-12-16T07:36:51.087Z] [INFO] Server is listening on http://localhost:8080
+[2025-12-16T07:37:02.400Z] [INFO] Server is listening on http://localhost:8080
+[2025-12-16T07:38:29.252Z] [INFO] Server is listening on http://localhost:8080
+[2025-12-16T07:39:09.655Z] [INFO] Server is listening on http://localhost:8080
+[2025-12-16T07:39:13.425Z] [INFO] Server is listening on http://localhost:8080
+[2025-12-16T08:26:31.543Z] [ERROR] Unhandled error: getaddrinfo ENOTFOUND ac-p6wjgiu-shard-00-02.6eabynd.mongodb.net
+Stack: MongoServerSelectionError: getaddrinfo ENOTFOUND ac-p6wjgiu-shard-00-02.6eabynd.mongodb.net
+    at Topology.selectServer (C:\Users\Duplex Developer\OneDrive\Desktop\Akshay Projects\HRMS\HRMSBackend\node_modules\mongodb\lib\sdam\topology.js:303:38)
+    at runNextTicks (node:internal/process/task_queues:65:5)
+    at listOnTimeout (node:internal/timers:549:9)
+    at process.processTimers (node:internal/timers:523:7)
+    at async executeOperation (C:\Users\Duplex Developer\OneDrive\Desktop\Akshay Projects\HRMS\HRMSBackend\node_modules\mongodb\lib\operations\execute_operation.js:101:20)
+    at async Collection.countDocuments (C:\Users\Duplex Developer\OneDrive\Desktop\Akshay Projects\HRMS\HRMSBackend\node_modules\mongodb\lib\collection.js:459:16)
+    at async model.Query.exec (C:\Users\Duplex Developer\OneDrive\Desktop\Akshay Projects\HRMS\HRMSBackend\node_modules\mongoose\lib\query.js:4342:63)
+    at async controller.getCountRecordsForApprovalNote (C:\Users\Duplex Developer\OneDrive\Desktop\Akshay Projects\HRMS\HRMSBackend\src\controllers\Admin\ApprovalNote\ApprovalNoteController.js:743:25)
+[2025-12-16T08:26:31.797Z] [ERROR] Unhandled error: getaddrinfo ENOTFOUND ac-p6wjgiu-shard-00-02.6eabynd.mongodb.net
+Stack: MongoServerSelectionError: getaddrinfo ENOTFOUND ac-p6wjgiu-shard-00-02.6eabynd.mongodb.net
+    at Topology.selectServer (C:\Users\Duplex Developer\OneDrive\Desktop\Akshay Projects\HRMS\HRMSBackend\node_modules\mongodb\lib\sdam\topology.js:303:38)
+    at async executeOperation (C:\Users\Duplex Developer\OneDrive\Desktop\Akshay Projects\HRMS\HRMSBackend\node_modules\mongodb\lib\operations\execute_operation.js:101:20)
+    at async Collection.countDocuments (C:\Users\Duplex Developer\OneDrive\Desktop\Akshay Projects\HRMS\HRMSBackend\node_modules\mongodb\lib\collection.js:459:16)
+    at async model.Query.exec (C:\Users\Duplex Developer\OneDrive\Desktop\Akshay Projects\HRMS\HRMSBackend\node_modules\mongoose\lib\query.js:4342:63)
+    at async controller.getCountRecordsForApprovalNote (C:\Users\Duplex Developer\OneDrive\Desktop\Akshay Projects\HRMS\HRMSBackend\src\controllers\Admin\ApprovalNote\ApprovalNoteController.js:743:25)
+[2025-12-16T08:27:00.507Z] [ERROR] Unhandled error: getaddrinfo ENOTFOUND ac-p6wjgiu-shard-00-02.6eabynd.mongodb.net
+Stack: MongoServerSelectionError: getaddrinfo ENOTFOUND ac-p6wjgiu-shard-00-02.6eabynd.mongodb.net
+    at Topology.selectServer (C:\Users\Duplex Developer\OneDrive\Desktop\Akshay Projects\HRMS\HRMSBackend\node_modules\mongodb\lib\sdam\topology.js:303:38)
+    at runNextTicks (node:internal/process/task_queues:65:5)
+    at listOnTimeout (node:internal/timers:549:9)
+    at process.processTimers (node:internal/timers:523:7)
+    at async executeOperation (C:\Users\Duplex Developer\OneDrive\Desktop\Akshay Projects\HRMS\HRMSBackend\node_modules\mongodb\lib\operations\execute_operation.js:101:20)
+    at async Collection.countDocuments (C:\Users\Duplex Developer\OneDrive\Desktop\Akshay Projects\HRMS\HRMSBackend\node_modules\mongodb\lib\collection.js:459:16)
+    at async model.Query.exec (C:\Users\Duplex Developer\OneDrive\Desktop\Akshay Projects\HRMS\HRMSBackend\node_modules\mongoose\lib\query.js:4342:63)
+    at async controller.getCountRecordsOfMpr (C:\Users\Duplex Developer\OneDrive\Desktop\Akshay Projects\HRMS\HRMSBackend\src\controllers\Admin\Requisition\RequisitionController.js:1635:26)
+[2025-12-16T08:27:00.511Z] [ERROR] Unhandled error: getaddrinfo ENOTFOUND ac-p6wjgiu-shard-00-02.6eabynd.mongodb.net
+Stack: MongoServerSelectionError: getaddrinfo ENOTFOUND ac-p6wjgiu-shard-00-02.6eabynd.mongodb.net
+    at Topology.selectServer (C:\Users\Duplex Developer\OneDrive\Desktop\Akshay Projects\HRMS\HRMSBackend\node_modules\mongodb\lib\sdam\topology.js:303:38)
+    at async executeOperation (C:\Users\Duplex Developer\OneDrive\Desktop\Akshay Projects\HRMS\HRMSBackend\node_modules\mongodb\lib\operations\execute_operation.js:101:20)
+    at async Collection.countDocuments (C:\Users\Duplex Developer\OneDrive\Desktop\Akshay Projects\HRMS\HRMSBackend\node_modules\mongodb\lib\collection.js:459:16)
+    at async model.Query.exec (C:\Users\Duplex Developer\OneDrive\Desktop\Akshay Projects\HRMS\HRMSBackend\node_modules\mongoose\lib\query.js:4342:63)
+    at async controller.getCountRecordsOfMpr (C:\Users\Duplex Developer\OneDrive\Desktop\Akshay Projects\HRMS\HRMSBackend\src\controllers\Admin\Requisition\RequisitionController.js:1635:26)
+[2025-12-16T08:27:47.799Z] [ERROR] Unhandled error: getaddrinfo ENOTFOUND ac-p6wjgiu-shard-00-02.6eabynd.mongodb.net
+Stack: MongoServerSelectionError: getaddrinfo ENOTFOUND ac-p6wjgiu-shard-00-02.6eabynd.mongodb.net
+    at Topology.selectServer (C:\Users\Duplex Developer\OneDrive\Desktop\Akshay Projects\HRMS\HRMSBackend\node_modules\mongodb\lib\sdam\topology.js:303:38)
+    at async executeOperation (C:\Users\Duplex Developer\OneDrive\Desktop\Akshay Projects\HRMS\HRMSBackend\node_modules\mongodb\lib\operations\execute_operation.js:101:20)
+    at async Collection.countDocuments (C:\Users\Duplex Developer\OneDrive\Desktop\Akshay Projects\HRMS\HRMSBackend\node_modules\mongodb\lib\collection.js:459:16)
+    at async model.Query.exec (C:\Users\Duplex Developer\OneDrive\Desktop\Akshay Projects\HRMS\HRMSBackend\node_modules\mongoose\lib\query.js:4342:63)
+    at async controller.getCountRecordsOfMpr (C:\Users\Duplex Developer\OneDrive\Desktop\Akshay Projects\HRMS\HRMSBackend\src\controllers\Admin\Requisition\RequisitionController.js:1635:26)
+[2025-12-16T10:30:51.742Z] [INFO] Server is listening on http://localhost:8080
+[2025-12-16T10:41:43.734Z] [INFO] Server is listening on http://localhost:8080
+[2025-12-16T10:44:03.913Z] [INFO] Server is listening on http://localhost:8080
+[2025-12-16T12:30:20.196Z] [ERROR] Unhandled error: read ECONNRESET
+Stack: Error: read ECONNRESET
+    at TLSWrap.onStreamRead (node:internal/stream_base_commons:216:20)
+[2025-12-16T12:41:35.213Z] [INFO] Server is listening on http://localhost:8080
+[2025-12-16T12:50:10.198Z] [INFO] Server is listening on http://localhost:8080
+[2025-12-16T12:50:58.720Z] [INFO] Server is listening on http://localhost:8080
+[2025-12-16T12:56:50.992Z] [INFO] Server is listening on http://localhost:8080
+[2025-12-16T12:58:18.279Z] [INFO] Server is listening on http://localhost:8080
+[2025-12-16T12:59:49.140Z] [INFO] Server is listening on http://localhost:8080
+[2025-12-16T13:01:54.605Z] [INFO] Server is listening on http://localhost:8080
+[2025-12-16T13:03:57.853Z] [INFO] Server is listening on http://localhost:8080
+[2025-12-16T13:04:08.642Z] [INFO] Server is listening on http://localhost:8080
+[2025-12-16T13:07:02.687Z] [INFO] Server is listening on http://localhost:8080
+[2025-12-16T13:07:14.675Z] [INFO] Server is listening on http://localhost:8080
+[2025-12-16T13:13:01.606Z] [INFO] Server is listening on http://localhost:8080

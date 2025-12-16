@@ -1,0 +1,1 @@
+{"smtp_host":"cloud.md4.in","smtp_port":"2525","smtp_username":"lakshyacabs-com/emailnotify-in","smtp_password":"CQ5puOLb6sMZs8TFVTDubXXx","smtp_from_mail":"info@emailnotify.in","smtp_reply_mail":"info@emailnotify.in","smtp_encryption_type":"TLS","smtp_email_content_type":"HTML","smtp_enable_status":"enabled","updated_on":"2024-12-02T05:27:20.938Z"}

@@ -1,0 +1,1 @@
+{"sms_auth_key":"sn1.host.in","sms_route_id":"2525","sms_sender_id":"laksyacab","sms_enable_status":"enabled","updated_on":"2024-12-02T05:27:26.514Z"}
