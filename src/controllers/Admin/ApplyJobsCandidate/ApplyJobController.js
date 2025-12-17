@@ -5749,7 +5749,7 @@ controller.sendJoiningIntimationMailToCandidates = async (req, res) => {
 
         return res.status(200).json({
             status: true,
-            message: 'Joining Intimation sent and email logged successfully'
+            message: 'Joining Intimation mail sent '
         });
 
     } catch (error) {
