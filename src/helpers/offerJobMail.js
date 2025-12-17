@@ -412,6 +412,77 @@ router.sendAppointmentLetterMailToCandidate = (toEmailId, candidateName, jobPosi
 	}
 }
 
+router.sendIntimationMailToPanelist = async (
+	candidateName,
+	jobPosition,
+	toEmailId,
+	ccEmailList = null,
+	content = ''
+) => {
 
+	const generalConfig = JSON.parse(fs.readFileSync('./src/config/general_config_file.txt', 'utf8'));
+	const organizationConfig = JSON.parse(fs.readFileSync('./src/config/organization_config_file.txt', 'utf8'));
+
+	const companyName = organizationConfig?.organization_name;
+	const companyLogo = `${process.env.IMAGE_PATH}${generalConfig.logo_image}`;
+
+	/* Best Regards */
+	let bestRegards = `${companyName} Recruitment Team`;
+
+	if (process.env.IS_A_HLFPPT_PANEL === 'YES') {
+		bestRegards += `
+            <p>
+                Hindustan Latex Family Planning Promotion Trust (HLFPPT)<br/>
+                Corporate Office- B-14 A, Second Floor, Sector 62, NOIDA, India<br/>
+                Website- www.hlfppt.org
+            </p>`;
+	}
+
+	const msgBody = `<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Candidate Job Acceptance Mail</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body style="font-family: 'Poppins', sans-serif; color: #585858;">
+    <table style="max-width:700px;margin:auto;">
+        <tr>
+            <td style="text-align:center;border-bottom:1px solid #34209B;padding:10px;">
+                <img src="${companyLogo}" width="175"/>
+            </td>
+        </tr>
+
+        <tr>
+            <td style="padding:20px;">
+                ${content}
+                ${bestRegards}
+            </td>
+        </tr>
+
+        <tr>
+            <td style="border-top:1px solid #34209B;padding:10px;">
+                <img src="${companyLogo}" width="175"/>
+                <p style="font-size:12px;">
+                    This email is confidential and intended only for the recipient.
+                </p>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>`;
+
+	const mailSubject = `Joining Intimation Mail  – ${candidateName} & ${jobPosition}`;
+	const email = toEmailId;
+	const ccEmail = ccEmailList?.length ? ccEmailList : null;
+
+	if (email && process.env.ACTIVATE_LIVE_EMAIL_ACCOUNTS === 'YES') {
+		emailSystem(email, msgBody, mailSubject, null, ccEmail);
+	} else {
+		emailSystem(process.env.TEST_EMAIL_ACCOUNTS, msgBody, mailSubject, null, ccEmail);
+	}
+};
 
 module.exports = router;

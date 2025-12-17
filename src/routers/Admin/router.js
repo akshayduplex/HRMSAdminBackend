@@ -293,7 +293,7 @@ router.post('/acceptRejectInterview', verifyToken, validateEmployeeAcceptReject,
 //router.post( '/offerJob', verifyToken, validateOfferJob, asyncErrorHandler( ApplyJobController.offerJob ));
 //this section is transfer to api name: send_approval_mail
 /************** Deprecated API's End Section **********/
-
+router.post('/send_joining_intimation_mail', verifyToken, asyncErrorHandler(ApplyJobController.sendJoiningIntimationMailToCandidates));
 router.post('/send_approval_mail', verifyToken, sendApprovalNoteOfferMailToCandidates, asyncErrorHandler(ApplyJobController.sendApprovalNoteOfferMailToCandidates));
 router.post('/uploadOnboardingDocuments', verifyToken, validateUploadOnboardDocuments, asyncErrorHandler(ApplyJobController.uploadOnboardingDocuments));
 router.post('/removeOnboardingDocuments', verifyToken, validateRemoveOnboardDocuments, asyncErrorHandler(ApplyJobController.removeOnboardingDocuments));

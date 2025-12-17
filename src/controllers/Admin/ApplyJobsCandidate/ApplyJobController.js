@@ -27,7 +27,7 @@ const { ScheduleInterviewMail } = require('../../../helpers/ScheduleInterviewMai
 const { scheduleInterviewerMail } = require('../../../helpers/scheduleInterviewerMail.js');
 const { rejectApplyJobMail } = require('../../../helpers/rejectApplyJobMail.js');
 const { assessmentSecondMail } = require('../../../helpers/assessmentSecondMail.js');
-const { offerJobMail, sendJobOfferMailToCandidateFromApprovalNote, sendJobOfferAcceptMailToPanelist, sendAppointmentLetterMailToCandidate } = require('../../../helpers/offerJobMail.js');
+const { offerJobMail, sendJobOfferMailToCandidateFromApprovalNote, sendJobOfferAcceptMailToPanelist, sendAppointmentLetterMailToCandidate, sendIntimationMailToPanelist } = require('../../../helpers/offerJobMail.js');
 const { loginCandidateMail } = require('../../../helpers/loginCandidateMail.js');
 const { SendJobOfferApprovalMail } = require('../../../helpers/SendJobOfferApprovalMail.js');
 const { FinalApprovalNoteMailToAddedByUser } = require('../../../helpers/FinalApprovalNoteMailToAddedByUser.js');
@@ -5406,265 +5406,12 @@ var updateProgressDataInApprovalNote = async (approval_note_doc_id, candidate_id
 /********** Create a dummy script for testing remove after demo  end dummy here **********/
 
 
-// controller.sendApprovalNoteOfferMailToCandidates = async( req, res )=>{ 
-
-//     if (req.body && typeof req.body === 'object') { 
-//         req.body = JSON.parse(JSON.stringify(req.body));
-//     }
-
-//     const errors = validationResult(req);
-//     const documents = [];
-
-//     req.files.forEach((file) => {
-//         const match = file.fieldname.match(/attachments\[(\d+)\]\[file_name\]/);
-//         const idx = match ? Number(match[1]) : -1;
-
-//         let docName = 'Untitled';
-
-//         // Try structured access first
-//         if (req.body.attachments && req.body.attachments[idx] && req.body.attachments[idx].doc_name) {
-//             docName = req.body.attachments[idx].doc_name;
-//         }
-
-//         // Fallback to flat key if structured fails
-//         const flatKey = `attachments[${idx}][doc_name]`;
-//         if (!docName || docName === 'Untitled') {
-//             docName = req.body[flatKey] || 'Untitled';
-//         }
-
-//         if (idx !== -1 ) {
-//             documents.push({
-//             doc_name: docName,
-//             file_name: file.filename, 
-//             add_date: new Date()
-//             });
-//         }
-//     });
-
-//     //console.log( documents );
-
-
-//     if (!errors.isEmpty()) { 
-//         deleteMultipleUploadedImage( documents ); 
-//         return res.status(406 ).json({ status: false, message: errors.array()[0].msg });
-//     }  
-
-//     const { selected_doc, email_subject, approval_note_id, contents, template_id, candidate_id, add_by_name, add_by_mobile, add_by_designation, add_by_email, trail_mail_list, salary_structure } = req.body;
-
-//     try{
-
-//         /************* Fetch Approval Note Data ***************/
-//         const ApprovalNoteData = await ApprovalNoteCI.findOne( {_id: dbObjectId(approval_note_id) } );  
-//         if( !ApprovalNoteData ){
-//             deleteMultipleUploadedImage( documents ); 
-//             return res.status(403).json( {'status':false, 'message': 'Template Not Found'} );
-//         }
-
-//         const findCandidate = ApprovalNoteData?.candidate_list.find( (item)=> item.cand_doc_id.toString() === candidate_id.toString() );
-//         const checkAnyPendingApprovalInCandidate = findCandidate?.approval_history.find( (elm)=> elm.approval_status !== 'Approved' );
-//         if( checkAnyPendingApprovalInCandidate ){
-//             deleteMultipleUploadedImage( documents );
-//             return res.status(403).json( {'status':false, 'message': 'This Candidate is not Approved By Panel Members'} );
-//         }
-
-//         /************* Fetch Template Data ***************/ 
-//         const templateData = await TemplateSettingsCI.findOne( { _id: dbObjectId( template_id ) } );  
-//         if( !templateData ){
-//             deleteMultipleUploadedImage( documents ); 
-//             return res.status(403).json( {'status':false,  'message': 'Template Not Found'} );
-//         }
-
-//         /*********prepare token ************/
-//         const tokenPayload = {}
-//         tokenPayload.candidate_id = findCandidate.cand_doc_id;
-//         tokenPayload.job_id = findCandidate.applied_job_doc_id;
-//         const token = generateJwtToken( tokenPayload );
-//         const combineVerifyToken = findCandidate.cand_doc_id+'|'+findCandidate.applied_job_doc_id+'|'+token;
-//         const base64Token = Buffer.from( combineVerifyToken ).toString('base64');
-
-//         var ccEmailList = findCandidate?.trail_mail_list || [];
-
-
-//         /*Add Progress data in Approval note*/
-//         const progressData = {} 
-//         progressData.add_by_name = add_by_name;
-//         progressData.add_by_mobile = add_by_mobile;
-//         progressData.add_by_email = add_by_email;
-//         progressData.add_by_designation = add_by_designation;
-//         progressData.add_date = dbDateFormat(); 
-
-
-//         /******** Define document status***********/
-//         var document_status_for_db;
-
-
-//         /************* Send Offer Job Mail ***************/
-//         if( templateData.template_for === 'Offer Letter' ){
-//             const arrayFilters = {'arrayFilters': [{'one._id': findCandidate.applied_job_doc_id }] } 
-//             const where = {}   
-//             where._id = findCandidate.cand_doc_id;
-//             where['applied_jobs._id'] = findCandidate.applied_job_doc_id; 
-
-//             const saveData = {}
-//             saveData.form_status = 'Offer';
-//             saveData.verify_token = base64Token;
-//             saveData.onboarding_docs_stage = 'offerletter';
-//             saveData['applied_jobs.$[one].form_status'] = 'Offer';
-//             saveData['applied_jobs.$[one].offer_status'] = 'Pending';
-//             saveData['applied_jobs.$[one].offer_ctc'] = parseFloat( findCandidate.offer_ctc );
-//             saveData['applied_jobs.$[one].onboard_date'] = convertToDbDate( findCandidate.onboarding_date ); 
-
-//             await JobAppliedCandidateCl.updateOne( where, {$set: saveData}, arrayFilters ) ;
-//             updateCandidateJobRecords( ApprovalNoteData.job_id.toString(), ApprovalNoteData.project_id.toString() ); 
-
-//             /*Add Progress data in Approval note*/ 
-//             progressData.title = `Offer Letter`;
-//             progressData.activity = 'Offer Letter Sent to Candidate';
-//             progressData.status = 'Accept Pending'; 
-
-//             document_status_for_db = 'mailsent';
-
-//         } 
-//         else if( templateData.template_for === 'Joining Kit' ){
-//             const where = {}
-//             where._id = findCandidate.cand_doc_id;
-//             const saveData = {}
-//             saveData.onboarding_docs_stage = 'joiningkit';
-//             await JobAppliedCandidateCl.updateOne( where, {$set: saveData} ) ;
-
-//             /*Add Progress data in Approval note*/ 
-//             progressData.title = `Joining Kit`;
-//             progressData.activity = 'Joining Kit Sent to Candidate'; 
-//             progressData.status = 'Upload Pending';
-
-//             document_status_for_db = 'mailsent';
-
-//         }
-//         else if( templateData.template_for === 'Appointment Letter' ){
-//             const where = {}
-//             where._id = findCandidate.cand_doc_id;
-//             const saveData = {}
-//             saveData.onboarding_docs_stage = 'appointmentletter';
-//             await JobAppliedCandidateCl.updateOne( where, {$set: saveData} ) ;
-
-//             /*Add Progress data in Approval note*/ 
-//             progressData.title = `Appointment Letter`;
-//             progressData.activity = 'Appointment Letter Generated For Approval'; 
-//             progressData.status = 'Approval Pending';
-
-//             document_status_for_db = 'generated';
-
-//         }
-
-
-//         /*Finally Add Progress data in Approval note  start script*/ 
-//         var collectTrailEmails = []; 
-//         collectTrailEmails.push(add_by_email); 
-//         if ( trail_mail_list ) {
-//             try {
-//                 const trailMail = JSON.parse( trail_mail_list );
-//                 trailMail.forEach((item) => {
-//                 if (item?.email) {
-//                     collectTrailEmails.push( item.email );
-//                 }
-//                 });
-//             } catch (err) {
-//                 console.error("Invalid JSON in trail_mail_list:", err);
-//             }
-//         }
-
-//         collectTrailEmails = [...new Set(collectTrailEmails)];
-//         ccEmailList = collectTrailEmails; 
-
-//         await updateProgressDataInApprovalNote( approval_note_id, candidate_id, progressData , collectTrailEmails , document_status_for_db, salary_structure ); 
-//         /*Finally Add Progress data in Approval note end script*/
-
-//         const added_by_data = {
-//             name: add_by_name || '',
-//             email: add_by_email || '',
-//             mobile: add_by_mobile || '',
-//             designation: add_by_designation || ''
-//         }
-
-//         //added on 29-08-2025
-//         const mailRegards = {}  
-//         mailRegards.name = add_by_name || '';
-//         mailRegards.email = add_by_email || '';
-//         mailRegards.mobile = add_by_mobile || '';
-//         mailRegards.designation = add_by_designation || '';
-
-//         const mailData = sendJobOfferMailToCandidateFromApprovalNote( ApprovalNoteData, findCandidate, contents, templateData, documents, base64Token, templateData.template_for, mailRegards , ccEmailList, document_status_for_db, selected_doc, email_subject ); 
-
-//         // if( process.env.DIGITAL_SIGNATURE_STATUS == 'ON' && mailData ){ /* THIS FEATURE IS ADDED ONLY FOR TESTING PURPOSES*/
-//         //     generatePDFFromHtml( mailData.body, templateData.template_for, findCandidate?.email, findCandidate?.name );
-//         //     return res.status(200).send( {'status':true, 'message': `${templateData.template_for} Send Successfully`} );
-//         // }
-
-
-//        /******** Save Send Mail Records ********/
-//        //delete old record for this candidate
-//        const saveMailRecords = {}
-//        saveMailRecords.candidate_id = findCandidate.cand_doc_id;
-//        saveMailRecords.doc_category = templateData.template_for;
-//        saveMailRecords.reference_doc_id = dbObjectId(approval_note_id);
-
-//        //delete old record for this candidate
-//        await CandidateSentMailLogsCI.deleteOne( saveMailRecords );
-
-
-//        saveMailRecords.content_data = mailData.body;
-//        saveMailRecords.attachments = mailData.attachments;
-//        saveMailRecords.add_date = dbDateFormat();
-//        saveMailRecords.updated_on = dbDateFormat();
-//        saveMailRecords.added_by_data = added_by_data;
-
-//        await CandidateSentMailLogsCI.create( saveMailRecords );
-
-//        /*Save Data in candidate profile*/
-//        const onboardDocuments = []
-//        mailData.attachments.forEach((elm)=>{
-//         const candidateData = {}
-//         candidateData.approval_note_doc_id = dbObjectId(approval_note_id);
-//         candidateData.doc_category = templateData.template_for;
-//         candidateData.doc_name = elm.doc_name;
-//         candidateData.is_html = elm.is_html;
-//         candidateData.send_file_data = { 
-//             file_name: elm.file_name,
-//             added_by_data: added_by_data
-//         }
-//         candidateData.status = 'pending';
-//         candidateData.add_date = dbDateFormat();
-//         onboardDocuments.push( candidateData );
-//        });
-
-//        if( onboardDocuments.length > 0 ){
-//         await JobAppliedCandidateCl.updateOne( {_id: findCandidate.cand_doc_id }, {$push: { onboarding_docs: onboardDocuments} } );
-//        }
-
-//        /*update mail send status in approval note*/
-//         updateDocumentStatusInApproval( approval_note_id , candidate_id, templateData.template_for, document_status_for_db );
-
-//         if( templateData.template_for === 'Offer Letter' ){ 
-//            var candidateData = await JobAppliedCandidateCl.findOne({_id: dbObjectId( candidate_id ) },{ name:1, email:1, job_title : 1,'applied_jobs':1})
-//            if( candidateData ){ 
-//                 if(typeof candidateData.email !== 'undefined' && candidateData.email !== ''){  
-//                     var findMatchItem = candidateData.applied_jobs.find((item) => item._id.toString() === findCandidate.applied_job_doc_id.toString());
-//                     //offerJobMail( candidateData.email, candidateData.name, findMatchItem, null, '', mailRegards, ccEmailList ); 
-//                 }
-//             }
-//         }
-
-//         return res.status(200).send( {'status':true, 'message': `${templateData.template_for} Send Successfully`} );
-
-//     }catch(error){  console.log( error );
-//         return res.status(403).json( {'status':false, 'message': error || process.env.DEFAULT_ERROR_MESSAGE } ); 
-//     }
-// }
 controller.sendApprovalNoteOfferMailToCandidates = async (req, res) => {
 
     if (req.body && typeof req.body === 'object') {
         req.body = JSON.parse(JSON.stringify(req.body));
     }
+
     const errors = validationResult(req);
     const documents = [];
 
@@ -5714,79 +5461,18 @@ controller.sendApprovalNoteOfferMailToCandidates = async (req, res) => {
         }
 
         const findCandidate = ApprovalNoteData?.candidate_list.find((item) => item.cand_doc_id.toString() === candidate_id.toString());
-
-        if (!findCandidate) {
+        const checkAnyPendingApprovalInCandidate = findCandidate?.approval_history.find((elm) => elm.approval_status !== 'Approved');
+        if (checkAnyPendingApprovalInCandidate) {
             deleteMultipleUploadedImage(documents);
-            return res.status(404).json({
-                status: false,
-                message: 'Candidate not found'
-            });
+            return res.status(403).json({ 'status': false, 'message': 'This Candidate is not Approved By Panel Members' });
         }
 
-        /************* Fetch Template Data (SAFE) *************/
-        let templateData = null;
-
-        // Joining Intimation DOES NOT require template_id
-        if (email_subject === 'Joining Intimation') {
-
-            templateData = {
-                template_for: 'Joining Intimation',
-                subject: email_subject || 'Joining Intimation',
-                template_body: contents || '',
-                attachments: [],
-                documents: [],
-                is_attachment_required: false
-            };
-
-        } else {
-
-            if (!template_id || template_id === 'undefined') {
-                deleteMultipleUploadedImage(documents);
-                return res.status(400).json({
-                    status: false,
-                    message: 'template_id is required'
-                });
-            }
-
-            const mongoose = require('mongoose');
-            if (!mongoose.Types.ObjectId.isValid(template_id)) {
-                deleteMultipleUploadedImage(documents);
-                return res.status(400).json({
-                    status: false,
-                    message: 'Invalid template_id'
-                });
-            }
-
-            templateData = await TemplateSettingsCI.findOne({
-                _id: dbObjectId(template_id)
-            });
-
-            if (!templateData) {
-                deleteMultipleUploadedImage(documents);
-                return res.status(403).json({
-                    status: false,
-                    message: 'Template Not Found'
-                });
-            }
+        /************* Fetch Template Data ***************/
+        const templateData = await TemplateSettingsCI.findOne({ _id: dbObjectId(template_id) });
+        if (!templateData) {
+            deleteMultipleUploadedImage(documents);
+            return res.status(403).json({ 'status': false, 'message': 'Template Not Found' });
         }
-
-        /************* Approval Check (SKIP for Joining Intimation) *************/
-        if (templateData.template_for !== 'Joining Intimation') {
-
-            const checkAnyPendingApprovalInCandidate =
-                findCandidate?.approval_history?.find(
-                    elm => elm.approval_status !== 'Approved'
-                );
-
-            if (checkAnyPendingApprovalInCandidate) {
-                deleteMultipleUploadedImage(documents);
-                return res.status(403).json({
-                    status: false,
-                    message: 'This Candidate is not Approved By Panel Members'
-                });
-            }
-        }
-
 
         /*********prepare token ************/
         const tokenPayload = {}
@@ -5868,13 +5554,6 @@ controller.sendApprovalNoteOfferMailToCandidates = async (req, res) => {
 
             document_status_for_db = 'generated';
 
-        }
-        else if (templateData.template_for === 'Joining Intimation') {
-            progressData.title = 'Joining Intimation';
-            progressData.activity = 'Joining Intimation Sent to Candidate';
-            progressData.status = 'Sent';
-
-            document_status_for_db = 'mailsent';
         }
 
 
@@ -5982,6 +5661,106 @@ controller.sendApprovalNoteOfferMailToCandidates = async (req, res) => {
         return res.status(403).json({ 'status': false, 'message': error || process.env.DEFAULT_ERROR_MESSAGE });
     }
 }
+controller.sendJoiningIntimationMailToCandidates = async (req, res) => {
+    try {
+        const {
+            candidate_doc_id,
+            approval_note_doc_id,
+            email_subject,
+            content,
+            add_by_name,
+            add_by_designation,
+            add_by_mobile,
+            add_by_email
+        } = req.body;
+
+        const approvalNote = await ApprovalNoteCI.findById(approval_note_doc_id);
+        if (!approvalNote) {
+            return res.status(404).json({
+                status: false,
+                message: 'Approval Note not found'
+            });
+        }
+
+        const candidate = approvalNote.candidate_list.find(
+            c => c.cand_doc_id.toString() === candidate_doc_id.toString()
+        );
+
+        if (!candidate) {
+            return res.status(404).json({
+                status: false,
+                message: 'Candidate not found'
+            });
+        }
+
+        // CC list
+        const ccEmailList = [add_by_email].filter(Boolean);
+
+
+        const mailRegards = {
+            name: add_by_name,
+            email: add_by_email,
+            designation: add_by_designation
+        };
+
+        await sendIntimationMailToPanelist(
+            candidate.name,
+            candidate.job_type,
+            candidate.email,
+            ccEmailList,
+            content
+        );
+
+        await ApprovalNoteCI.updateOne(
+            {
+                _id: approval_note_doc_id,
+                "candidate_list.cand_doc_id": candidate_doc_id
+            },
+            {
+                $addToSet: {
+                    "candidate_list.$.intimation_mail_list": candidate.email
+                }
+            }
+        );
+
+
+        const progressData = {
+            title: 'Joining Intimation',
+            activity: 'Joining Intimation Sent',
+            status: 'Mail Sent',
+            add_by_name,
+            add_by_mobile,
+            add_by_email,
+            add_by_designation,
+            add_date: new Date()
+        };
+
+        await ApprovalNoteCI.updateOne(
+            {
+                _id: approval_note_doc_id,
+                "candidate_list.cand_doc_id": candidate_doc_id
+            },
+            {
+                $push: {
+                    "candidate_list.$.progress_data": progressData
+                }
+            }
+        );
+
+        return res.status(200).json({
+            status: true,
+            message: 'Joining Intimation sent and email logged successfully'
+        });
+
+    } catch (error) {
+        console.error('sendJoiningIntimationMailToCandidates error:', error);
+        return res.status(500).json({
+            status: false,
+            message: error.message || 'Internal server error'
+        });
+    }
+};
+
 controller.getOnboardDocuments = async (req, res) => {
 
     const errors = validationResult(req);

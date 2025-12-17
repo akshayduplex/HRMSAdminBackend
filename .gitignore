@@ -1,7 +1,16 @@
-"node_modules/"
-"uploads/" 
-"zipped/" 
-"certificates/"
-"employee_uploads/"
-"exports/"
-"logs/""logs/*.log" 
+# Dependencies
+node_modules/
+
+# Build
+build/
+
+# Upload folders
+uploads/
+zipped/
+certificates/
+employee_uploads/
+exports/
+
+# Logs
+logs/
+logs/*.log

@@ -181,6 +181,7 @@ const candidatesList = new mongoose.Schema({
         add_date: { type: Date }
     }],
     trail_mail_list: [],
+    intimation_mail_list: [{ type: String, trim: true, lowercase: true }],
     appointment_letter_verification_status: {
         status: { type: String, enum: ['', 'Pending', 'Complete', 'Reject'], default: '' },
         remark: { type: String }
@@ -263,7 +264,6 @@ const ApprovalNoteSchema = new mongoose.Schema({
     panel_members_list: [approvalMembersList],
     candidate_list: [candidatesList],
     interviewer_list: [interviewerList],
-    intimation_mail_list: [candidatesList],
     add_by_details: {
         name: { type: String, required: true },
         email: { type: String, required: true, match: /.+\@.+\..+/ },
