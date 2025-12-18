@@ -1,8 +1,8 @@
 const RequisitionFormCI = require('../../../models/RequisitionFormCI.js');
-const { dbObjectId } = require('../../../models/dbObject.js');
+const { dbObjectId, dbObjectIdValidate } = require('../../../models/dbObject.js');
 const EmployeeCI = require('../../../models/EmployeeCI.js');
 const ProjectCl = require('../../../models/ProjectCl.js');
-
+const JobCl = require('../../../models/JobsCI.js');
 
 const dotenv = require("dotenv");
 dotenv.config({ path: '../src/config.env' });
@@ -1005,7 +1005,14 @@ controller.getRequisitionDataList = (req, res) => {
 /********* Update Place of Posting ************/
 controller.updatePlaceOfPosting = async (req, res) => {
     try {
-        let { requisition_id, place_of_posting } = req.body;
+        const { requisition_id, place_of_posting } = req.body;
+
+        if (!dbObjectIdValidate(requisition_id)) {
+            return res.status(400).json({
+                status: false,
+                message: 'Valid requisition_id is required'
+            });
+        }
 
         if (!Array.isArray(place_of_posting) || place_of_posting.length === 0) {
             return res.status(400).json({
@@ -1015,18 +1022,24 @@ controller.updatePlaceOfPosting = async (req, res) => {
         }
 
         const sanitizedPlaceOfPosting = place_of_posting
-            .filter(item => item && typeof item === 'object' && !Array.isArray(item))
-            .map(item => ({
-                location_name: item.location_name ? item.location_name.toString().trim() : '',
-                location_id: item.location_id || null,
-                state_id: item.state_id || null,
-                state_name: item.state_name ? item.state_name.toString().trim() : ''
-            }));
+            .filter(item => item && typeof item === 'object')
+            .map(item => {
+                const locationName = item.location_name?.toString().trim();
+                const stateName = item.state_name?.toString().trim();
 
-        if (sanitizedPlaceOfPosting.length === 0) {
+                const validLocationId = dbObjectIdValidate(item.location_id);
+
+                return {
+                    location_id: validLocationId ? dbObjectId(validLocationId) : null,
+                    location_name: locationName && stateName ? `${locationName}, ${stateName}` : locationName || stateName || ''
+                };
+            })
+            .filter(item => item.location_id && item.location_name);
+
+        if (!sanitizedPlaceOfPosting.length) {
             return res.status(400).json({
                 status: false,
-                message: 'place_of_posting contains no valid entries (must be array of objects with required fields)'
+                message: 'No valid place_of_posting data found'
             });
         }
 
@@ -1038,10 +1051,7 @@ controller.updatePlaceOfPosting = async (req, res) => {
                     updated_on: new Date()
                 }
             },
-            {
-                new: true,
-                runValidators: true
-            }
+            { new: true }
         );
 
         if (!updatedData) {
@@ -1051,25 +1061,64 @@ controller.updatePlaceOfPosting = async (req, res) => {
             });
         }
 
+        // AUTO-SYNC JOB LOCATION
+        await syncJobLocationByRequisition(
+            requisition_id,
+            sanitizedPlaceOfPosting
+        );
+
         return res.status(200).json({
             status: true,
-            message: 'Place of posting updated successfully',
-            data: {
-                _id: updatedData._id,
-                place_of_posting: updatedData.place_of_posting
-            }
+            message: 'Place of posting & job locations updated successfully',
+            data: updatedData.place_of_posting
         });
 
     } catch (error) {
         console.error('updatePlaceOfPosting error:', error);
         return res.status(500).json({
             status: false,
-            message: error.message || 'An unexpected error occurred'
+            message: error.message
         });
     }
 };
 
+const syncJobLocationByRequisition = async (requisitionId, placeOfPosting) => {
+    try {
+        if (
+            !dbObjectIdValidate(requisitionId) ||
+            !Array.isArray(placeOfPosting)
+        ) return;
 
+        const locations = placeOfPosting
+            .filter(p =>
+                p &&
+                p.location_id &&
+                p.location_name &&
+                dbObjectIdValidate(p.location_id)
+            )
+            .map(p => ({
+                loc_id: dbObjectId(p.location_id),
+                name: p.location_name.trim()
+            }));
+
+        if (!locations.length) return;
+
+        await JobCl.updateMany(
+            {
+                requisition_form_id: dbObjectId(requisitionId)
+            },
+            {
+                $set: {
+                    location: locations,
+                    updated_on: new Date()
+                }
+            }
+        );
+
+    } catch (error) {
+        console.error('syncJobLocationByRequisition error:', error);
+    }
+};
 
 /********* Update Approval Status ************/
 controller.approveRejectRequisitionForm = (req, res) => {
