@@ -1469,5 +1469,103 @@ controller.approveRejectAppointmentLetter = async (req, res) => {
     }
 }
 
+controller.getAppraisalNoteDataById = async (req, res) => {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+        return res.status(403).json({ status: false, message: errors.array()[0].msg });
+    }
+
+    const { approval_note_doc_id } = req.body;
+
+    try {
+        const data = await ApprovalNoteCI.aggregate([
+            {
+                $match: {
+                    _id: dbObjectId(approval_note_doc_id)
+                }
+            },
+
+            // unwind candidate list
+            {
+                $unwind: {
+                    path: "$candidate_list",
+                    preserveNullAndEmptyArrays: true
+                }
+            },
+
+            // lookup candidate master
+            {
+                $lookup: {
+                    from: "dt_candidates", // <-- candidate master collection
+                    localField: "candidate_list.cand_doc_id",
+                    foreignField: "_id",
+                    as: "candidate_master"
+                }
+            },
+
+            // merge required fields
+            {
+                $addFields: {
+                    "candidate_list.father_name": { $arrayElemAt: ["$candidate_master.father_name", 0] },
+                    "candidate_list.father_mobile": { $arrayElemAt: ["$candidate_master.father_mobile", 0] },
+                    "candidate_list.father_email": { $arrayElemAt: ["$candidate_master.father_email", 0] },
+                    "candidate_list.address": { $arrayElemAt: ["$candidate_master.address", 0] }
+                }
+            },
+
+            // regroup back
+            {
+                $group: {
+                    _id: "$_id",
+                    doc: { $first: "$$ROOT" },
+                    candidate_list: { $push: "$candidate_list" }
+                }
+            },
+
+            {
+                $addFields: {
+                    "doc.candidate_list": "$candidate_list"
+                }
+            },
+
+            {
+                $replaceRoot: {
+                    newRoot: "$doc"
+                }
+            },
+
+            // remove temp lookup data
+            {
+                $project: {
+                    candidate_master: 0
+                }
+            }
+        ]);
+
+        if (!data.length) {
+            return res.status(404).json({ status: false, message: "Data not found" });
+        }
+
+        // sort candidate list
+        data[0].candidate_list.sort((a, b) => {
+            const priority = { Selected: 1, Waiting: 2 };
+            return (priority[a.interview_shortlist_status] || 99) -
+                (priority[b.interview_shortlist_status] || 99);
+        });
+
+        return res.status(200).json({
+            status: true,
+            data: data[0],
+            message: "API Accessed Successfully"
+        });
+
+    } catch (error) {
+        return res.status(403).json({
+            status: false,
+            message: error.message || process.env.DEFAULT_ERROR_MESSAGE
+        });
+    }
+};
+
 
 module.exports = controller;

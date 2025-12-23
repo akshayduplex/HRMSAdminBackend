@@ -300,6 +300,7 @@ router.post('/removeOnboardingDocuments', verifyToken, validateRemoveOnboardDocu
 router.post('/getCandidateEmailContent', verifyToken, validateGetCandidateEmailContent, asyncErrorHandler(ApplyJobController.getCandidateEmailContent));
 router.post('/skipOfferJoiningLetter', verifyToken, validateSkipOfferJoiningLetter, asyncErrorHandler(ApplyJobController.skipOfferJoiningLetter));
 
+router.post('/send_appointment_mail', verifyToken, asyncErrorHandler(ApplyJobController.sendAppointmentMailToCandidates));
 
 /**
  * @description Send Rating mail to Employee / 
@@ -357,6 +358,7 @@ router.post('/skipReferenceCheckData', verifyToken, validateSkipReferenceCheckDa
 router.post('/updateReferenceCheckFromAdmin', verifyToken, validateUpdateReferenceCheckFromAdmin, asyncErrorHandler(ApprovalNoteController.updateReferenceCheckFromAdmin));
 router.post('/approveRejectAppointmentLetter', verifyToken, validateApproveRejectAppointmentLetter, asyncErrorHandler(ApprovalNoteController.approveRejectAppointmentLetter));
 
+router.post('/getAppraisalNoteDataById', verifyToken, validateGetApprovalNoteById, asyncErrorHandler(ApprovalNoteController.getAppraisalNoteDataById));
 
 /**
  * @description Manage Candidate Discussion History / 
@@ -773,8 +775,6 @@ router.post('/removeTemplateSettingsById', verifyToken, validateRemoveTemplateSe
 router.post('/removeAttachmentDocFromTSById', verifyToken, validateRemoveAttachmentDocFromTSById, asyncErrorHandler(TemplateSettingsController.removeAttachmentDocFromTSById));
 router.post('/getTemplateSettingsByDocName', verifyToken, validateGetTemplateSettingsByDocName, asyncErrorHandler(TemplateSettingsController.getTemplateSettingsByDocName));
 router.post('/getTemplateSettingsByApprovalNote', verifyToken, validateGetTemplateSettingsByApprovalNote, asyncErrorHandler(TemplateSettingsController.getTemplateSettingsByApprovalNote));
-
-
 
 /**Test Script Routes  can be removed on live server **/
 const TestScriptController = require('../../controllers/Admin/TestingScript/TestScriptController');
