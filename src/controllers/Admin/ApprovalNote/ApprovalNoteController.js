@@ -1,7 +1,7 @@
 const ApprovalNoteCI = require('../../../models/ApprovalNoteCI.js');
 const JobAppliedCandidateCl = require('../../../models/JobAppliedCandidateCl.js');
 
-const { dbObjectId } = require('../../../models/dbObject.js');
+const { dbObjectId, dbObjectIdValidate } = require('../../../models/dbObject.js');
 const EmployeeCI = require('../../../models/EmployeeCI.js');
 
 const dotenv = require("dotenv");
@@ -1475,45 +1475,72 @@ controller.getAppraisalNoteDataById = async (req, res) => {
         return res.status(403).json({ status: false, message: errors.array()[0].msg });
     }
 
-    const { approval_note_doc_id } = req.body;
+    const { approval_note_doc_id, cand_doc_id } = req.body;
 
     try {
-        const data = await ApprovalNoteCI.aggregate([
+        const pipeline = [
             {
                 $match: {
                     _id: dbObjectId(approval_note_doc_id)
                 }
             },
-
-            // unwind candidate list
             {
-                $unwind: {
-                    path: "$candidate_list",
-                    preserveNullAndEmptyArrays: true
-                }
-            },
+                $unwind: "$candidate_list"
+            }
+        ];
 
-            // lookup candidate master
+        // filter candidate by id if provided
+        if (dbObjectIdValidate(cand_doc_id)) {
+            pipeline.push({
+                $match: {
+                    "candidate_list.cand_doc_id": dbObjectId(cand_doc_id)
+                }
+            });
+        }
+
+        pipeline.push(
             {
                 $lookup: {
-                    from: "dt_candidates", // <-- candidate master collection
+                    from: "dt_candidates",
                     localField: "candidate_list.cand_doc_id",
                     foreignField: "_id",
                     as: "candidate_master"
                 }
             },
-
-            // merge required fields
             {
                 $addFields: {
-                    "candidate_list.father_name": { $arrayElemAt: ["$candidate_master.father_name", 0] },
-                    "candidate_list.father_mobile": { $arrayElemAt: ["$candidate_master.father_mobile", 0] },
-                    "candidate_list.father_email": { $arrayElemAt: ["$candidate_master.father_email", 0] },
-                    "candidate_list.address": { $arrayElemAt: ["$candidate_master.address", 0] }
+                    "candidate_list.father_name": {
+                        $arrayElemAt: [
+                            "$candidate_master.applicant_form_data.father_hushband_name",
+                            0
+                        ]
+                    },
+                    "candidate_list.reporting_manager": {
+                        $arrayElemAt: [
+                            "$candidate_master.annexure_eleven_form_data.reporting_manager",
+                            0
+                        ]
+                    },
+                    "candidate_list.communication_address": {
+                        $arrayElemAt: [
+                            "$candidate_master.applicant_form_data.communication_address",
+                            0
+                        ]
+                    },
+                    "candidate_list.permanent_address": {
+                        $arrayElemAt: [
+                            "$candidate_master.applicant_form_data.permanent_address",
+                            0
+                        ]
+                    },
+                    "candidate_list.family_members": {
+                        $arrayElemAt: [
+                            "$candidate_master.applicant_form_data.family_members",
+                            0
+                        ]
+                    }
                 }
             },
-
-            // regroup back
             {
                 $group: {
                     _id: "$_id",
@@ -1521,32 +1548,31 @@ controller.getAppraisalNoteDataById = async (req, res) => {
                     candidate_list: { $push: "$candidate_list" }
                 }
             },
-
             {
                 $addFields: {
                     "doc.candidate_list": "$candidate_list"
                 }
             },
-
             {
-                $replaceRoot: {
-                    newRoot: "$doc"
-                }
+                $replaceRoot: { newRoot: "$doc" }
             },
-
-            // remove temp lookup data
             {
                 $project: {
                     candidate_master: 0
                 }
             }
-        ]);
+        );
+
+        const data = await ApprovalNoteCI.aggregate(pipeline);
 
         if (!data.length) {
-            return res.status(404).json({ status: false, message: "Data not found" });
+            return res.status(404).json({
+                status: false,
+                message: "Candidate not found"
+            });
         }
 
-        // sort candidate list
+        // optional sorting
         data[0].candidate_list.sort((a, b) => {
             const priority = { Selected: 1, Waiting: 2 };
             return (priority[a.interview_shortlist_status] || 99) -

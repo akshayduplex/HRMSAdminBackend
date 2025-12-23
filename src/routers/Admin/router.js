@@ -300,7 +300,7 @@ router.post('/removeOnboardingDocuments', verifyToken, validateRemoveOnboardDocu
 router.post('/getCandidateEmailContent', verifyToken, validateGetCandidateEmailContent, asyncErrorHandler(ApplyJobController.getCandidateEmailContent));
 router.post('/skipOfferJoiningLetter', verifyToken, validateSkipOfferJoiningLetter, asyncErrorHandler(ApplyJobController.skipOfferJoiningLetter));
 
-router.post('/send_appointment_mail', verifyToken, asyncErrorHandler(ApplyJobController.sendAppointmentMailToCandidates));
+router.post('/send_appointment_mail', verifyToken, sendApprovalNoteOfferMailToCandidates, asyncErrorHandler(ApplyJobController.sendAppointmentMailToCandidates));
 
 /**
  * @description Send Rating mail to Employee / 
@@ -340,7 +340,7 @@ router.get('/naukri/get_job_applicants_list', asyncErrorHandler(PublishJobOnNauk
  * @description Candidate Approval Note / 
  */
 const ApprovalNoteController = require('../../controllers/Admin/ApprovalNote/ApprovalNoteController.js');
-const { validateGetApprovalNoteById, validateApproveRejectAppointmentLetter, validateGetApprovalNoteFromListHod, validateGetPendingCandidateApprovalNotesListForHod, validateGetPendingCandidateApprovalNotesListForCeo, validateUpdateReferenceCheckFromAdmin, validateSkipReferenceCheckData, validateUpdateReferenceCheckDataByLink, validateUpdateReferenceCheckInApprovalNote, validateGetApprovalNoteFromListCeo, validateRemoveCandidateFromApprovalNoteById, validateDeleteApprovalNoteById, validateGetApprovalNoteFromList, validateDownloadApprovalNote } = require('../../middlewares/validators/Admin/ApprovalNote/validate.js');
+const { validateGetApprovalNoteById, validateApproveRejectAppointmentLetter, validateGetApprovalNoteFromListHod, validateGetPendingCandidateApprovalNotesListForHod, validateGetPendingCandidateApprovalNotesListForCeo, validateUpdateReferenceCheckFromAdmin, validateSkipReferenceCheckData, validateUpdateReferenceCheckDataByLink, validateUpdateReferenceCheckInApprovalNote, validateGetApprovalNoteFromListCeo, validateRemoveCandidateFromApprovalNoteById, validateDeleteApprovalNoteById, validateGetApprovalNoteFromList, validateDownloadApprovalNote, validateGetApprovalNoteDataById } = require('../../middlewares/validators/Admin/ApprovalNote/validate.js');
 
 router.post('/getAppraisalNoteById', verifyToken, validateGetApprovalNoteById, asyncErrorHandler(ApprovalNoteController.getAppraisalNoteById));
 router.post('/getApprovalNoteFromList', verifyToken, validateGetApprovalNoteFromList, asyncErrorHandler(ApprovalNoteController.getApprovalNoteFromList));
@@ -358,7 +358,7 @@ router.post('/skipReferenceCheckData', verifyToken, validateSkipReferenceCheckDa
 router.post('/updateReferenceCheckFromAdmin', verifyToken, validateUpdateReferenceCheckFromAdmin, asyncErrorHandler(ApprovalNoteController.updateReferenceCheckFromAdmin));
 router.post('/approveRejectAppointmentLetter', verifyToken, validateApproveRejectAppointmentLetter, asyncErrorHandler(ApprovalNoteController.approveRejectAppointmentLetter));
 
-router.post('/getAppraisalNoteDataById', verifyToken, validateGetApprovalNoteById, asyncErrorHandler(ApprovalNoteController.getAppraisalNoteDataById));
+router.post('/getAppraisalNoteDataById', verifyToken, validateGetApprovalNoteDataById, asyncErrorHandler(ApprovalNoteController.getAppraisalNoteDataById));
 
 /**
  * @description Manage Candidate Discussion History / 
@@ -775,7 +775,6 @@ router.post('/removeTemplateSettingsById', verifyToken, validateRemoveTemplateSe
 router.post('/removeAttachmentDocFromTSById', verifyToken, validateRemoveAttachmentDocFromTSById, asyncErrorHandler(TemplateSettingsController.removeAttachmentDocFromTSById));
 router.post('/getTemplateSettingsByDocName', verifyToken, validateGetTemplateSettingsByDocName, asyncErrorHandler(TemplateSettingsController.getTemplateSettingsByDocName));
 router.post('/getTemplateSettingsByApprovalNote', verifyToken, validateGetTemplateSettingsByApprovalNote, asyncErrorHandler(TemplateSettingsController.getTemplateSettingsByApprovalNote));
-
 /**Test Script Routes  can be removed on live server **/
 const TestScriptController = require('../../controllers/Admin/TestingScript/TestScriptController');
 //router.get( '/updateCandidateApprovalNote', asyncErrorHandler( TestScriptController.updateCandidateApprovalNote ));

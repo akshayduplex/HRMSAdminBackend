@@ -4,13 +4,20 @@ const express = require('express');
 const router = express.Router();
 
 /*********** get Appraisal note List Data Validation *****************/
-router.validateGetApprovalNoteById = [ 
+router.validateGetApprovalNoteById = [
     body('approval_note_doc_id')
         .notEmpty()
         .withMessage('Please provide approval note doc ID')
 ];
 
-router.validateGetApprovalNoteFromList = [ 
+router.validateGetApprovalNoteDataById = [
+    body('approval_note_doc_id')
+        .notEmpty()
+        .notEmpty()
+        .withMessage('Please provide approval note doc ID'),
+];
+
+router.validateGetApprovalNoteFromList = [
     /*body('job_id')
         .notEmpty()
         .withMessage('Please provide Job ID'),*/
@@ -26,8 +33,8 @@ router.validateGetApprovalNoteFromList = [
         .withMessage('Per page record must be a positive integer')
 ];
 
-router.validateGetApprovalNoteFromListCeo = [ 
-    
+router.validateGetApprovalNoteFromListCeo = [
+
     body('page_no')
         .notEmpty()
         .withMessage('Page number is required')
@@ -40,8 +47,8 @@ router.validateGetApprovalNoteFromListCeo = [
         .withMessage('Per page record must be a positive integer')
 ];
 
-router.validateGetPendingCandidateApprovalNotesListForCeo = [ 
-    
+router.validateGetPendingCandidateApprovalNotesListForCeo = [
+
     body('page_no')
         .notEmpty()
         .withMessage('Page number is required')
@@ -54,13 +61,13 @@ router.validateGetPendingCandidateApprovalNotesListForCeo = [
         .withMessage('Per page record must be a positive integer')
 ];
 
-router.validateDownloadApprovalNote = [ 
+router.validateDownloadApprovalNote = [
     body('approval_note_doc_id')
         .notEmpty()
         .withMessage('Please provide approval note doc ID')
 ];
 
-router.validateDeleteApprovalNoteById = [ 
+router.validateDeleteApprovalNoteById = [
     body('approval_note_doc_id')
         .notEmpty()
         .withMessage('Please provide approval note doc ID'),
@@ -69,7 +76,7 @@ router.validateDeleteApprovalNoteById = [
         .withMessage('Please provide approval note ID')
 ];
 
-router.validateRemoveCandidateFromApprovalNoteById = [ 
+router.validateRemoveCandidateFromApprovalNoteById = [
     body('approval_note_doc_id')
         .notEmpty()
         .withMessage('Please provide approval note doc ID'),
@@ -82,7 +89,7 @@ router.validateRemoveCandidateFromApprovalNoteById = [
 ];
 
 
-router.validateUpdateReferenceCheckInApprovalNote = [ 
+router.validateUpdateReferenceCheckInApprovalNote = [
     body('candidate_id')
         .notEmpty()
         .withMessage('Please provide Candidate ID'),
@@ -105,13 +112,13 @@ router.validateUpdateReferenceCheckInApprovalNote = [
         .notEmpty()
         .withMessage('Please provide reference status'),
     body('referenceStatus')
-        .isIn(['previous','current','hrhead'])
-        .withMessage(`Reference status for must be one of: ${['previous','current','hrhead'].join(', ')}`),
+        .isIn(['previous', 'current', 'hrhead'])
+        .withMessage(`Reference status for must be one of: ${['previous', 'current', 'hrhead'].join(', ')}`),
 ];
 
 
 
-router.validateUpdateReferenceCheckDataByLink = [ 
+router.validateUpdateReferenceCheckDataByLink = [
     body('candidate_doc_id')
         .notEmpty()
         .withMessage('Please provide Candidate ID'),
@@ -120,7 +127,7 @@ router.validateUpdateReferenceCheckDataByLink = [
         .withMessage('Please provide Approval Note ID'),
     body('applied_job_doc_id')
         .notEmpty()
-        .withMessage('Please provide Applied Job Doc ID'), 
+        .withMessage('Please provide Applied Job Doc ID'),
     body('email')
         .notEmpty()
         .withMessage('Please provide reference email ID'),
@@ -128,14 +135,14 @@ router.validateUpdateReferenceCheckDataByLink = [
         .notEmpty()
         .withMessage('Please provide reference status'),
     body('referenceStatus')
-        .isIn(['previous','current','hrhead'])
-        .withMessage(`Reference status for must be one of: ${['previous','current','hrhead'].join(', ')}`),
+        .isIn(['previous', 'current', 'hrhead'])
+        .withMessage(`Reference status for must be one of: ${['previous', 'current', 'hrhead'].join(', ')}`),
     body('referenceStatus')
         .notEmpty()
         .withMessage('Please provide reference status')
 ];
 
-router.validateUpdateReferenceCheckFromAdmin = [ 
+router.validateUpdateReferenceCheckFromAdmin = [
     body('candidate_doc_id')
         .notEmpty()
         .withMessage('Please provide Candidate ID'),
@@ -144,7 +151,7 @@ router.validateUpdateReferenceCheckFromAdmin = [
         .withMessage('Please provide Approval Note ID'),
     body('applied_job_doc_id')
         .notEmpty()
-        .withMessage('Please provide Applied Job Doc ID'), 
+        .withMessage('Please provide Applied Job Doc ID'),
     body('contact_person_name')
         .notEmpty()
         .withMessage('Please provide contact person name'),
@@ -155,15 +162,15 @@ router.validateUpdateReferenceCheckFromAdmin = [
         .notEmpty()
         .withMessage('Please provide reference status'),
     body('referenceStatus')
-        .isIn(['previous','current','hrhead'])
-        .withMessage(`Reference status for must be one of: ${['previous','current','hrhead'].join(', ')}`),
+        .isIn(['previous', 'current', 'hrhead'])
+        .withMessage(`Reference status for must be one of: ${['previous', 'current', 'hrhead'].join(', ')}`),
     body('referenceStatus')
         .notEmpty()
         .withMessage('Please provide reference status')
 ];
 
 
-router.validateSkipReferenceCheckData = [ 
+router.validateSkipReferenceCheckData = [
     body('referenceStatus')
         .notEmpty()
         .withMessage('Please provide reference Status'),
@@ -175,7 +182,7 @@ router.validateSkipReferenceCheckData = [
         .withMessage('Please provide Approval Note ID'),
     body('name')
         .notEmpty()
-        .withMessage('Please provide Applied Job Doc ID'), 
+        .withMessage('Please provide Applied Job Doc ID'),
     body('email')
         .notEmpty()
         .withMessage('Please provide reference email ID'),
@@ -200,10 +207,10 @@ router.validateApproveRejectAppointmentLetter = [
         .notEmpty()
         .withMessage('Status id required')
 ]
- 
 
-router.validateGetApprovalNoteFromListHod = [ 
-   body('employee_id')
+
+router.validateGetApprovalNoteFromListHod = [
+    body('employee_id')
         .notEmpty()
         .withMessage('Employee Document ID required'),
     body('page_no')
@@ -218,7 +225,7 @@ router.validateGetApprovalNoteFromListHod = [
         .withMessage('Per page record must be a positive integer')
 ];
 
-router.validateGetPendingCandidateApprovalNotesListForHod = [ 
+router.validateGetPendingCandidateApprovalNotesListForHod = [
     body('employee_id')
         .notEmpty()
         .withMessage('Employee Document ID required'),

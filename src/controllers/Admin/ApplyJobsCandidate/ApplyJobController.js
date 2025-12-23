@@ -7947,216 +7947,127 @@ controller.getApprovalMemberListForCandidate = async (req, res) => {
 
 controller.sendAppointmentMailToCandidates = async (req, res) => {
     try {
-
-        if (req.body && typeof req.body === 'object') {
-            req.body = JSON.parse(JSON.stringify(req.body));
-        }
-
-        const errors = validationResult(req);
-        if (!errors.isEmpty()) {
-            return res.status(406).json({
-                status: false,
-                message: errors.array()[0].msg
-            });
-        }
-
         const {
             approval_note_id,
             candidate_id,
-            selected_doc,          // Offer Letter | Joining Kit | Appointment Letter
-            email_subject,
+            selected_doc,
             contents,
-            add_by_name,
-            add_by_mobile,
-            add_by_designation,
-            add_by_email,
-            trail_mail_list,
             salary_structure
         } = req.body;
-
-        /* ---------------- Fetch Approval Note ---------------- */
-        const approvalNote = await ApprovalNoteCI.findOne({ _id: dbObjectId(approval_note_id) });
-        if (!approvalNote) {
-            return res.status(403).json({ status: false, message: 'Approval Note Not Found' });
+        if (!approval_note_id || !candidate_id) {
+            return res.status(400).json({ status: false, message: "Missing required fields" });
         }
 
-        /* ---------------- Find Candidate ---------------- */
+        let parsedSalaryStructure = null;
+
+        if (salary_structure) {
+            if (typeof salary_structure === 'string') {
+                try {
+                    parsedSalaryStructure = JSON.parse(salary_structure);
+                } catch (err) {
+                    return res.status(400).json({
+                        status: false,
+                        message: "Invalid salary_structure JSON"
+                    });
+                }
+            } else {
+                // already an object
+                parsedSalaryStructure = salary_structure;
+            }
+        }
+
+        // Find Approval Note
+        const approvalNote = await ApprovalNoteCI.findOne({ _id: dbObjectId(approval_note_id) });
+        if (!approvalNote) {
+            return res.status(404).json({ status: false, message: "Approval Note Not Found" });
+        }
+        // Find Candidate
+        const candidateObjectId = dbObjectId(candidate_id);
+
         const findCandidate = approvalNote.candidate_list.find(
-            item => item.cand_doc_id.toString() === candidate_id.toString()
+            item => item.cand_doc_id.equals(candidateObjectId)
         );
 
         if (!findCandidate) {
-            return res.status(403).json({ status: false, message: 'Candidate Not Found' });
+            return res.status(404).json({ status: false, message: "Candidate Not Found" });
         }
 
-        /* ---------------- Panel Approval Check ---------------- */
-        const pendingApproval = findCandidate.approval_history?.find(
-            item => item.approval_status !== 'Approved'
-        );
+        // Calculate offer CTC correctly
+        let offerCTC = 0;
 
-        if (pendingApproval) {
-            return res.status(403).json({
-                status: false,
-                message: 'Candidate is not fully approved by panel members'
-            });
+        if (parsedSalaryStructure) {
+            const {
+                monthlySalary = 0,
+                totalCTOAnnual = 0
+            } = parsedSalaryStructure;
+
+            const paymentType = (findCandidate.payment_type || '').toLowerCase();
+
+            switch (paymentType) {
+                case 'annum':
+                case 'year':
+                    // ANNUAL OFFER CTC
+                    offerCTC = totalCTOAnnual;
+                    break;
+
+                case 'month':
+                    // MONTHLY OFFER CTC
+                    offerCTC = monthlySalary;
+                    break;
+
+                default:
+                    offerCTC = totalCTOAnnual || monthlySalary;
+            }
         }
 
-        /* ---------------- Generate Verification Token ---------------- */
-        const tokenPayload = {
-            candidate_id: findCandidate.cand_doc_id,
-            job_id: findCandidate.applied_job_doc_id
-        };
 
-        const token = generateJwtToken(tokenPayload);
-        const verifyToken = Buffer
-            .from(`${findCandidate.cand_doc_id}|${findCandidate.applied_job_doc_id}|${token}`)
-            .toString('base64');
-
-        /* ---------------- Progress Data ---------------- */
-        const progressData = {
-            add_by_name,
-            add_by_mobile,
-            add_by_email,
-            add_by_designation,
-            add_date: dbDateFormat()
-        };
-
-        let document_status_for_db = '';
-
-        /* ---------------- Business Workflow ---------------- */
-        if (selected_doc === 'Offer Letter') {
-
-            await JobAppliedCandidateCl.updateOne(
-                {
-                    _id: findCandidate.cand_doc_id,
-                    'applied_jobs._id': findCandidate.applied_job_doc_id
-                },
-                {
-                    $set: {
-                        form_status: 'Offer',
-                        verify_token: verifyToken,
-                        onboarding_docs_stage: 'offerletter',
-                        'applied_jobs.$.form_status': 'Offer',
-                        'applied_jobs.$.offer_status': 'Pending',
-                        'applied_jobs.$.offer_ctc': Number(findCandidate.offer_ctc),
-                        'applied_jobs.$.onboard_date': convertToDbDate(findCandidate.onboarding_date)
-                    }
+        const result = await ApprovalNoteCI.updateOne(
+            {
+                _id: dbObjectId(approval_note_id),
+                'candidate_list.cand_doc_id': dbObjectId(candidate_id)
+            },
+            {
+                $set: {
+                    'candidate_list.$.salary_structure_data': parsedSalaryStructure
+                        ? JSON.stringify(parsedSalaryStructure)
+                        : null,
+                    'candidate_list.$.offer_ctc': offerCTC
                 }
-            );
-
-            updateCandidateJobRecords(
-                approvalNote.job_id.toString(),
-                approvalNote.project_id.toString()
-            );
-
-            progressData.title = 'Offer Letter';
-            progressData.activity = 'Offer Letter Sent to Candidate';
-            progressData.status = 'Accept Pending';
-            document_status_for_db = 'mailsent';
-
-        } else if (selected_doc === 'Joining Kit') {
-
-            await JobAppliedCandidateCl.updateOne(
-                { _id: findCandidate.cand_doc_id },
-                { $set: { onboarding_docs_stage: 'joiningkit' } }
-            );
-
-            progressData.title = 'Joining Kit';
-            progressData.activity = 'Joining Kit Sent to Candidate';
-            progressData.status = 'Upload Pending';
-            document_status_for_db = 'mailsent';
-
-        } else if (selected_doc === 'Appointment Letter') {
-
-            await JobAppliedCandidateCl.updateOne(
-                { _id: findCandidate.cand_doc_id },
-                { $set: { onboarding_docs_stage: 'appointmentletter' } }
-            );
-
-            progressData.title = 'Appointment Letter';
-            progressData.activity = 'Appointment Letter Generated For Approval';
-            progressData.status = 'Approval Pending';
-            document_status_for_db = 'generated';
-
-        } else {
-            return res.status(400).json({
-                status: false,
-                message: 'Invalid document type'
-            });
-        }
-
-        /* ---------------- CC / Trail Mail ---------------- */
-        let ccEmailList = [add_by_email];
-
-        if (trail_mail_list) {
-            try {
-                JSON.parse(trail_mail_list).forEach(item => {
-                    if (item?.email) ccEmailList.push(item.email);
-                });
-            } catch (err) { }
-        }
-
-        ccEmailList = [...new Set(ccEmailList)];
-
-        /* ---------------- Update Approval Note Progress ---------------- */
-        await updateProgressDataInApprovalNote(
-            approval_note_id,
-            candidate_id,
-            progressData,
-            ccEmailList,
-            document_status_for_db,
-            salary_structure
+            }
         );
 
-        /* ---------------- Send Mail (HTML only) ---------------- */
-        await sendMail({
-            to: findCandidate.email,
-            subject: email_subject,
-            html: contents,
-            cc: ccEmailList
-        });
+        if (result.matchedCount === 0) {
+            return res.status(404).json({ status: false, message: "Candidate not updated" });
+        }
 
-        /* ---------------- Save Mail Logs (No Attachments) ---------------- */
-        await CandidateSentMailLogsCI.deleteOne({
-            candidate_id: findCandidate.cand_doc_id,
-            doc_category: selected_doc,
-            reference_doc_id: dbObjectId(approval_note_id)
-        });
-
-        await CandidateSentMailLogsCI.create({
-            candidate_id: findCandidate.cand_doc_id,
-            doc_category: selected_doc,
+        const sentMailLog = new CandidateSentMailLogsCI({
+            candidate_id: dbObjectId(candidate_id),
+            doc_category: "Appointment letter",
             reference_doc_id: dbObjectId(approval_note_id),
             content_data: contents,
             attachments: [],
-            add_date: dbDateFormat(),
-            updated_on: dbDateFormat(),
+            add_date: new Date(),
+            updated_on: new Date(),
             added_by_data: {
-                name: add_by_name,
-                email: add_by_email,
-                mobile: add_by_mobile,
-                designation: add_by_designation
+                name: req.user?.name,
+                email: req.user?.email,
+                mobile: req.user?.mobile,
+                designation: req.user?.designation
             }
         });
 
-        /* ---------------- Update Approval Note Document Status ---------------- */
-        updateDocumentStatusInApproval(
-            approval_note_id,
-            candidate_id,
-            selected_doc,
-            document_status_for_db
-        );
+        await sentMailLog.save();
 
         return res.status(200).json({
             status: true,
-            message: `${selected_doc} sent successfully`
+            message: `${selected_doc} saved successfully`
         });
 
     } catch (error) {
         console.error(error);
-        return res.status(403).json({
+        return res.status(500).json({
             status: false,
-            message: error.message || process.env.DEFAULT_ERROR_MESSAGE
+            message: error.message || "Internal Server Error"
         });
     }
 };
