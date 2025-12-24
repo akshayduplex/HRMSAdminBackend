@@ -1385,14 +1385,13 @@ router.validateApplyJobListHod = [
         .withMessage('Per page record must be a positive integer')
 ];
 
-router.sendApprovalNoteOfferMailToCandidates = [
-    uploadMultipleImageFileName,
-
+router.sendAppointmentMailToCandidates = [
     body('approval_note_id')
         .notEmpty()
         .withMessage('Approval note id is required'),
 
     body('candidate_id')
+        .optional()
         .notEmpty()
         .withMessage('Candidate id is required'),
 

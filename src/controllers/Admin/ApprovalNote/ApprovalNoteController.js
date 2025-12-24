@@ -468,11 +468,16 @@ controller.getPendingCandidateApprovalNotesListForCeo = async (req, res) => {
 
         const data = await ApprovalNoteCI.aggregate(pipeline);
 
-        if (!data.length) {
-            return res.status(403).json({ status: false, message: 'No record matched' });
-        }
+        // total count
+        const countPipeline = [
+            { $unwind: "$candidate_list" },
+            { $match: where },
+            { $count: "total" }
+        ];
 
-        // 🔹 Post-processing
+        const countResult = await ApprovalNoteCI.aggregate(countPipeline);
+        const total = countResult[0]?.total || 0;
+
         const outPutData = updateDatesInArray(
             replaceNullUndefined(data),
             ['add_date', 'updated_on'],
@@ -482,8 +487,10 @@ controller.getPendingCandidateApprovalNotesListForCeo = async (req, res) => {
         return res.status(200).json({
             status: true,
             data: outPutData,
+            total,
             message: 'API Accessed Successfully'
         });
+
 
     } catch (error) {
         console.error(error);
@@ -589,10 +596,25 @@ controller.getPendingCandidateApprovalNotesListForHod = async (req, res) => {
         ];
 
         const data = await ApprovalNoteCI.aggregate(pipeline);
+        const countPipeline = pipeline.filter(stage =>
+            !stage.$skip &&
+            !stage.$limit &&
+            !stage.$sort &&
+            !stage.$project
+        );
 
+        countPipeline.push({ $count: "total" });
+        const countResult = await ApprovalNoteCI.aggregate(countPipeline);
+        const total = countResult[0]?.total || 0;
         if (!data.length) {
-            return res.status(403).json({ status: false, message: 'No record matched' });
+            return res.status(200).json({
+                status: true,
+                data: [],
+                total,
+                message: 'No record matched'
+            });
         }
+
 
         // 🔹 Post-processing
         const outPutData = updateDatesInArray(
@@ -604,6 +626,7 @@ controller.getPendingCandidateApprovalNotesListForHod = async (req, res) => {
         return res.status(200).json({
             status: true,
             data: outPutData,
+            total,
             message: 'API Accessed Successfully'
         });
 
