@@ -8042,7 +8042,7 @@ controller.sendAppointmentMailToCandidates = async (req, res) => {
 
         const sentMailLog = new CandidateSentMailLogsCI({
             candidate_id: dbObjectId(candidate_id),
-            doc_category: "Appointment letter",
+            doc_category: "Appointment Letter",
             reference_doc_id: dbObjectId(approval_note_id),
             content_data: contents,
             attachments: [],

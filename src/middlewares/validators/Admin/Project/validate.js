@@ -4,14 +4,14 @@ const { body } = require('express-validator');
 
 //Upload middleware 
 const { uploadFile, uploadMultiple } = require('../../../fileUploads');
-var uploadDoc = uploadFile.single('filename'); 
-var uploadMultiDoc = uploadMultiple.array('files_name', 10 );
+var uploadDoc = uploadFile.single('filename');
+var uploadMultiDoc = uploadMultiple.array('files_name', 10);
 
 
 const allowedStatuses = ['Active', 'Closed'];
 
 
-router.validateAddProject = [ 
+router.validateAddProject = [
     uploadDoc,
     body('title')
         .notEmpty()
@@ -68,7 +68,7 @@ router.validateDeleteProject = [
 router.validateProjectById = [
     body('_id')
         .notEmpty()
-        .withMessage('Please enter document ID') 
+        .withMessage('Please enter document ID')
 ];
 
 /*** Validate Project Change Status ********/
@@ -183,5 +183,12 @@ router.validateGetDmsProjectList = [
         .withMessage('Per page record must be a positive integer')
 ];
 
+router.validategetProjectStatusCount = [
+    body('project_id')
+        .exists().withMessage('project_id is required')
+        .notEmpty().withMessage('project_id cannot be empty')
+        .isMongoId().withMessage('Invalid project_id'),
+
+];
 
 module.exports = router;

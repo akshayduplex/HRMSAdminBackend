@@ -93,7 +93,7 @@ router.post('/getDurationList', verifyToken, validateDurationList, asyncErrorHan
  * @description Manage Project Master APIs/ controllers/ Validation/ Routers
  */
 const ProjectController = require('../../controllers/Admin/Project/ProjectController');
-const { validateAddProject, validateEditProject, validateProjectEmploymentList, validateEditProjectBudget, validateCloseProject, validateDeleteProject, validateProjectById, validateChangeProjectStatus, validateProjectList, validateProjectExtensionDate, validateProjectBudgetExtension } = require('../../middlewares/validators/Admin/Project/validate');
+const { validateAddProject, validateEditProject, validateProjectEmploymentList, validateEditProjectBudget, validateCloseProject, validateDeleteProject, validateProjectById, validateChangeProjectStatus, validateProjectList, validateProjectExtensionDate, validateProjectBudgetExtension, validategetProjectStatusCount } = require('../../middlewares/validators/Admin/Project/validate');
 
 router.post('/addProject', verifyToken, validateAddProject, asyncErrorHandler(ProjectController.addProjectData));
 router.post('/editProject', verifyToken, validateEditProject, asyncErrorHandler(ProjectController.editProject));
@@ -109,6 +109,8 @@ router.post('/addProjectBudgetLedger', verifyToken, asyncErrorHandler(ProjectCon
 
 router.post('/editProjectLocation', verifyToken, asyncErrorHandler(ProjectController.editProjectLocation));
 router.post('/getProjectEmploymentList', verifyToken, validateProjectEmploymentList, asyncErrorHandler(ProjectController.getProjectEmploymentList));
+
+router.post('/getProjectStatusCount', verifyToken, validategetProjectStatusCount, asyncErrorHandler(ProjectController.getProjectStatusCount));
 
 /**
  * @description Manage Holiday Calender / 

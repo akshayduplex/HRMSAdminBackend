@@ -9,3 +9,6 @@
 
 /send_appointment_mail
 /getAppraisalNoteDataById
+
+26.12.25
+/getProjectStatusCount
