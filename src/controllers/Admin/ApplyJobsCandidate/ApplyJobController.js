@@ -955,13 +955,20 @@ controller.getApplyJobList = async (req, res) => {
                         }
                     }
 
-                    if (req.body.hasOwnProperty('job_id') && req.body.job_id !== '') {
-                        var pushFormData = appliedJobList.find((item) => item.job_id.toString() === req.body.job_id.toString());
-                        var appliedJobList = [];
-                        if (pushFormData) {
-                            appliedJobList.push(pushFormData);
-                        }
+                    // Filter by project_id (priority)
+                    if (req.body.hasOwnProperty('project_id') && req.body.project_id !== '') {
+                        appliedJobList = appliedJobList.filter(
+                            item => item.project_id?.toString() === req.body.project_id.toString()
+                        );
                     }
+
+                    // Optional job_id filter
+                    if (req.body.hasOwnProperty('job_id') && req.body.job_id !== '') {
+                        appliedJobList = appliedJobList.filter(
+                            item => item.job_id?.toString() === req.body.job_id.toString()
+                        );
+                    }
+
                     else {
                         if (req.body.hasOwnProperty('form_status') && req.body.form_status !== '' && appliedJobList.length >= 1) {
                             var pushFormData = appliedJobList.find((item) => item.form_status.toString() === req.body.form_status.toString());
@@ -999,8 +1006,6 @@ controller.getApplyJobList = async (req, res) => {
         }
     }
 }
-
-
 controller.editProfile = (req, res) => {
 
     if (req.body && typeof req.body === 'object') {

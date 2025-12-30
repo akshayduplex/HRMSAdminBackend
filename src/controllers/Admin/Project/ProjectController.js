@@ -1253,17 +1253,17 @@ controller.getProjectStatusCount = async (req, res) => {
         }
 
         /* ---------------- Published Jobs ---------------- */
-        // Count all jobs for the project (or adjust based on your needs)
+        // Count all jobs for the project
         const publishedJobs = await JobCl.countDocuments({
             project_id: projectObjectId,
-            status: { $in: ['Published', 'Unpublished'] } // Include other statuses if needed
+            status: { $in: ['Published', 'Unpublished'] }
         });
 
         /* ---------------- Approval Notes ---------------- */
         // Query approval notes directly from ApprovalNote model
         const approvalNotesCount = await ApprovalNoteCI.countDocuments({
             project_id: projectObjectId,
-            status: { $ne: 'Deleted' } // Exclude deleted if you have soft delete
+            status: { $ne: 'Deleted' }
         });
 
         /* ---------------- Candidate Stats ---------------- */
@@ -1275,7 +1275,7 @@ controller.getProjectStatusCount = async (req, res) => {
             {
                 $match: {
                     'applied_jobs.project_id': projectObjectId,
-                    'applied_jobs.form_status': { $ne: 'Deleted' } // Exclude deleted candidates
+                    'applied_jobs.form_status': { $ne: 'Deleted' }
                 }
             },
 
@@ -1338,6 +1338,15 @@ controller.getProjectStatusCount = async (req, res) => {
                                 1, 0
                             ]
                         }
+                    },
+                    joined: {
+                        $sum: {
+                            $cond: [
+                                { $eq: ['$applied_jobs.mark_as_hired', 'Yes'] },
+                                1,
+                                0
+                            ]
+                        }
                     }
                 }
             }
@@ -1350,7 +1359,8 @@ controller.getProjectStatusCount = async (req, res) => {
             approvalCandidates: 0,
             offerLetter: 0,
             appointmentLetter: 0,
-            hired: 0
+            hired: 0,
+            joined: 0
         };
 
         /* ---------------- Response ---------------- */
@@ -1367,6 +1377,7 @@ controller.getProjectStatusCount = async (req, res) => {
                 offer_letter: stats.offerLetter,
                 appointment_letter: stats.appointmentLetter,
                 hired: stats.hired,
+                joined: stats.joined,
                 total_designation_status: project.budget_estimate_list.length
             }
         });

@@ -1515,7 +1515,6 @@ controller.sendRequisitionApprovalEmailToSingleEmployee = (req, res) => {
                             return res.status(403).send({ 'status': false, 'message': 'No Employee Record Found' });
                         }
                     }).catch((error) => {
-                        console.log(error);
                         return res.status(403).send({ 'status': false, 'message': error || process.env.DEFAULT_ERROR_MESSAGE });
                     });
 
@@ -1525,7 +1524,6 @@ controller.sendRequisitionApprovalEmailToSingleEmployee = (req, res) => {
             }
 
         }).catch((error) => {
-            console.log(error);
             return res.status(403).send({ 'status': false, 'message': error || process.env.DEFAULT_ERROR_MESSAGE });
         });
 }

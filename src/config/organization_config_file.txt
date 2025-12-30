@@ -1,1 +1,1 @@
-{"organization_name":"HLFPPT","organization_email_id":"duplextechnology@gmail.com","organization_mobile_no":"8090060608","organization_whatsapp_no":"8090060608","updated_on":"2024-12-02T05:27:18.027Z"}
+{"organization_name":"HLFPPT","organization_email_id":"career@hlfppt.org","organization_mobile_no":"9838387070","organization_whatsapp_no":"9452000089","updated_on":"2025-12-23T10:35:03.518Z"}
