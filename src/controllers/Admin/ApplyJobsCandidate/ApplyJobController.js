@@ -8,7 +8,7 @@ const ApprovalNoteCI = require('../../../models/ApprovalNoteCI.js');
 const TemplateSettingsCI = require('../../../models/TemplateSettingsCI.js');
 const CandidateSentMailLogsCI = require('../../../models/CandidateSentMailLogsCI.js');
 
-const { dbObjectId } = require('../../../models/dbObject.js');
+const { dbObjectId, dbObjectIdValidate } = require('../../../models/dbObject.js');
 const dotenv = require("dotenv");
 dotenv.config({ path: '../src/config.env' });
 
@@ -8073,6 +8073,116 @@ controller.sendAppointmentMailToCandidates = async (req, res) => {
         return res.status(500).json({
             status: false,
             message: error.message || "Internal Server Error"
+        });
+    }
+};
+
+controller.cloneJobAppliedByCandidate = async (req, res) => {
+    try {
+        const { candidate_id, applied_job_id, job_id } = req.body;
+
+        /** Validate input */
+        if (!candidate_id || !applied_job_id || !job_id) {
+            return res.status(400).json({
+                success: false,
+                message: 'candidate_id, applied_job_id and job_id are required'
+            });
+        }
+
+        const validCandidateId = dbObjectIdValidate(candidate_id);
+        const validAppliedJobId = dbObjectIdValidate(applied_job_id);
+        const validJobId = dbObjectIdValidate(job_id);
+
+        if (!validCandidateId || !validAppliedJobId || !validJobId) {
+            return res.status(400).json({
+                success: false,
+                message: 'Invalid ObjectId provided'
+            });
+        }
+
+        /** Fetch candidate */
+        const candidate = await JobAppliedCandidateCl.findById(
+            dbObjectId(validCandidateId)
+        );
+
+        if (!candidate) {
+            return res.status(404).json({
+                success: false,
+                message: 'Candidate not found'
+            });
+        }
+
+        /** Find applied job inside array */
+        const oldAppliedJob = candidate.applied_jobs.id(
+            dbObjectId(validAppliedJobId)
+        );
+
+        if (!oldAppliedJob) {
+            return res.status(404).json({
+                success: false,
+                message: 'Applied job not found'
+            });
+        }
+
+        /** Fetch job master details */
+        const job = await JobCl.findById(
+            dbObjectId(validJobId)
+        ).lean();
+
+        if (!job) {
+            return res.status(404).json({
+                success: false,
+                message: 'Job not found'
+            });
+        }
+
+        /** Clone applied job */
+        const clonedAppliedJob = JSON.parse(JSON.stringify(oldAppliedJob));
+
+        delete clonedAppliedJob._id; // new subdocument id
+
+        /** Override ONLY job-specific fields */
+        clonedAppliedJob.job_id = job._id;
+        clonedAppliedJob.job_title = job.job_title;
+        clonedAppliedJob.job_type = job.job_type;
+        clonedAppliedJob.job_location = job.location?.[0]?.name || '';
+        clonedAppliedJob.job_designation = job.designation || '';
+        clonedAppliedJob.job_designation_id = job.designation_id || null;
+
+        clonedAppliedJob.offer_ctc = job.offer_ctc || 0;
+        clonedAppliedJob.original_ctc = job.original_ctc || 0;
+        clonedAppliedJob.project_id = job.project_id;
+        clonedAppliedJob.project_name = job.project_name;
+        clonedAppliedJob.department = job.department;
+
+        /** Preserve workflow + meta fields (already cloned) */
+        clonedAppliedJob.add_date = oldAppliedJob.add_date;
+        clonedAppliedJob.form_status = oldAppliedJob.form_status;
+        clonedAppliedJob.interview_status = oldAppliedJob.interview_status;
+        clonedAppliedJob.offer_status = oldAppliedJob.offer_status;
+        clonedAppliedJob.mark_as_hired = oldAppliedJob.mark_as_hired;
+
+        /** Deep clone interviewer array */
+        clonedAppliedJob.interviewer = Array.isArray(oldAppliedJob.interviewer)
+            ? JSON.parse(JSON.stringify(oldAppliedJob.interviewer))
+            : [];
+
+        candidate.applied_jobs.push(clonedAppliedJob);
+
+        await candidate.save();
+
+        return res.status(200).json({
+            success: true,
+            message: 'Applied job cloned successfully'
+        });
+
+    } catch (error) {
+        console.error('cloneJobAppliedCandidateData ERROR:', error);
+
+        return res.status(500).json({
+            success: false,
+            message: 'Internal server error',
+            error: error.message
         });
     }
 };

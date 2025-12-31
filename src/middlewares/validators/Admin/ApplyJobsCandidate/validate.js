@@ -1418,4 +1418,18 @@ router.sendAppointmentMailToCandidates = [
         })
 ];
 
+router.validatecloneJobAppliedByCandidate = [
+    body('candidate_id')
+        .notEmpty().withMessage('candidate_id is required')
+        .isMongoId().withMessage('Invalid candidate_id'),
+
+    body('applied_job_id')
+        .notEmpty().withMessage('applied_job_id is required')
+        .isMongoId().withMessage('Invalid applied_job_id'),
+
+    body('job_id')
+        .notEmpty().withMessage('job_id is required')
+        .isMongoId().withMessage('Invalid job_id')
+];
+
 module.exports = router;
